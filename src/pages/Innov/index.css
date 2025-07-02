@@ -1,0 +1,339 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+.innov-frame {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(360deg, #FFFFFF 0%, #EEFFF8 21.15%, #D9EEFF 100%);
+  box-sizing: border-box;
+}
+:root {
+  --main-blue: #1A65D4;
+}
+/* 顶部导航栏（与Home页面完全一致） */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  height: 85px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 60px;
+  box-shadow: 0 2px 8px rgba(200,220,255,0.08);
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+.logo-icon {
+  width: 56px;
+  height: 56px;
+  margin-right: 18px;
+}
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--main-blue);
+  transform: rotate(-0.71deg);
+  letter-spacing: 1px;
+  font-family: 'Inter', sans-serif;
+  line-height: 2.1rem;
+}
+.navbar-center {
+  display: flex;
+  gap: 36px;
+}
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2A2B2F;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  font-family: 'Inter', sans-serif;
+  background: none;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  display: inline-block;
+  line-height: 1.7rem;
+}
+.nav-link.active,
+.nav-link:hover {
+  background: #f0f6ff;
+  color: var(--main-blue);
+}
+
+.innov-content {
+  padding-top: 90px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.innov-header {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.innov-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #1A65D4;
+  margin-bottom: 16px;
+}
+.innov-subtitle {
+  font-size: 1.1rem;
+  color: #42424C;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+.innov-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 60px;
+}
+.innov-card {
+  background: #FDFDFD;
+  border: 2px solid #C3C3C4;
+  border-radius: 15px;
+  width: 30%;
+  min-width: 320px;
+  max-width: 440px;
+  padding: 32px 24px 24px 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 4px 16px rgba(158,194,224,0.08);
+}
+.innov-card-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+.innov-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2A2B2F;
+  margin-bottom: 12px;
+}
+.innov-card-desc {
+  font-size: 0.95rem;
+  color: #000;
+  line-height: 1.6;
+}
+.innov-feature-section {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.innov-feature-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #596CE9 5.77%, #4C9ADA 98.08%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 24px;
+}
+.innov-feature-desc {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 32px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+.innov-feature-img-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.innov-feature-img {
+  width: 80vw;
+  max-width: 898px;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 10px 10px 5px #9EC2E0;
+  margin-bottom: 16px;
+}
+.innov-feature-img-desc span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1A65D4;
+}
+@media (max-width: 1200px) {
+  .innov-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .innov-card {
+    width: 90vw;
+    max-width: 95vw;
+  }
+  .innov-feature-img {
+    width: 98vw;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1vw 2vw;
+    gap: 0.5rem;
+  }
+  .navbar-center {
+    flex-wrap: wrap;
+    gap: 1vw;
+  }
+}
+
+.sim-cards-img-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 56px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+.sim-cards-col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.sim-card {
+  min-width: 320px;
+  max-width: 340px;
+  background: #fffbe6;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(200,220,255,0.10);
+  padding: 28px 24px 22px 24px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.sim-card-yellow {
+  background: #fffbe6;
+}
+.sim-card-purple {
+  background: #eaeaff;
+}
+.sim-card-blue {
+  background: #e6f6ff;
+}
+.sim-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+.sim-card-desc {
+  font-size: 1rem;
+  color: #444;
+  font-weight: 400;
+}
+.sim-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 56px;
+}
+.sim-img {
+  width: 680px;
+  max-width: 52vw;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(100, 120, 244, 0.08);
+}
+@media (max-width: 1200px) {
+  .sim-cards-img-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .sim-cards-col {
+    flex-direction: row;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+  .sim-img-wrap {
+    margin-left: 0;
+    margin-top: 18px;
+  }
+  .sim-img {
+    width: 98vw;
+    max-width: 98vw;
+  }
+}
+
+.sim-scenario-section {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.sim-scenario-desc {
+  max-width: 1200px;
+  margin: 0 auto 32px auto;
+  font-size: 1rem;
+  color: #222;
+  text-align: left;
+  font-weight: 400;
+}
+.sim-scenario-imgs-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+.sim-scenario-img-col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.sim-scenario-img {
+  width: 460px;
+  max-width: 52vw;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(100, 120, 244, 0.10);
+  background: #fff;
+}
+.sim-scenario-desc-bottom {
+  margin-top: 32px;
+  font-size: 1rem;
+  color: #222;
+  text-align: left;
+  font-weight: 400;
+}
+@media (max-width: 1000px) {
+  .sim-scenario-imgs-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .sim-scenario-img-col {
+    flex-direction: row;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+  .sim-scenario-img {
+    width: 98vw;
+    max-width: 98vw;
+  }
+}
