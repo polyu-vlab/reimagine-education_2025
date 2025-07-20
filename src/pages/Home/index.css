@@ -44,6 +44,13 @@ body, html {
   display: flex;
   align-items: center;
 }
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
 .logo-icon {
   width: 56px;
   height: 56px;
