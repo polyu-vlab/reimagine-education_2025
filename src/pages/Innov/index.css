@@ -11,7 +11,7 @@ body, html {
 .innov-frame {
   width: 100vw;
   min-height: 100vh;
-  background: linear-gradient(360deg, #FFFFFF 0%, #EEFFF8 21.15%, #D9EEFF 100%);
+background: linear-gradient(360deg, #FFFFFF 0%, #EEFFF8 21.15%, #D9EEFF 100%);
   box-sizing: border-box;
 }
 :root {
@@ -25,7 +25,7 @@ body, html {
   left: 0;
   width: 100vw;
   z-index: 1000;
-  height: 85px;
+height: 85px;
   background: #fff;
   display: flex;
   align-items: center;
@@ -52,9 +52,9 @@ body, html {
 }
 .logo-text {
   font-size: 2rem;
-  font-weight: 700;
+font-weight: 700;
   color: var(--main-blue);
-  transform: rotate(-0.71deg);
+transform: rotate(-0.71deg);
   letter-spacing: 1px;
 }
 .navbar-center {
@@ -63,8 +63,8 @@ body, html {
 }
 .nav-link {
   font-size: 1.1rem;
-  font-weight: 500;
-  color: #2A2B2F;
+font-weight: 500;
+color: #2A2B2F;
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 8px;
@@ -88,14 +88,14 @@ body, html {
 }
 .innov-title {
   font-size: 2.1rem;
-  font-weight: 800;
-  color: #1A65D4;
+font-weight: 800;
+color: #1A65D4;
   margin-bottom: 16px;
 }
 .innov-subtitle {
   font-size: 1.1rem;
   color: #42424C;
-  font-weight: 400;
+font-weight: 400;
   margin-bottom: 32px;
 }
 .innov-cards {
@@ -106,9 +106,9 @@ body, html {
   margin-bottom: 60px;
 }
 .innov-card {
-  background: #FDFDFD;
-  border: 2px solid #C3C3C4;
-  border-radius: 15px;
+background: #FDFDFD;
+border: 2px solid #C3C3C4;
+border-radius: 15px;
   width: 30%;
   min-width: 320px;
   max-width: 440px;
@@ -120,14 +120,14 @@ body, html {
   box-shadow: 0 4px 16px rgba(158,194,224,0.08);
 }
 .innov-card-icon {
-  width: 48px;
-  height: 48px;
+width: 48px;
+height: 48px;
   margin-bottom: 16px;
 }
 .innov-card-title {
   font-size: 1.1rem;
-  font-weight: 700;
-  color: #2A2B2F;
+font-weight: 700;
+color: #2A2B2F;
   margin-bottom: 12px;
 }
 .innov-card-desc {
@@ -173,8 +173,8 @@ body, html {
 }
 .innov-feature-img-desc span {
   font-size: 1rem;
-  font-weight: 700;
-  color: #1A65D4;
+font-weight: 700;
+color: #1A65D4;
 }
 @media (max-width: 1200px) {
   .innov-cards {
@@ -204,17 +204,17 @@ body, html {
 }
 
 .sim-cards-img-row {
-  display: flex;
-  flex-direction: row;
+display: flex;
+flex-direction: row;
   align-items: flex-start;
   justify-content: center;
   gap: 56px;
   margin-top: 32px;
-  flex-wrap: wrap;
+flex-wrap: wrap;
 }
 .sim-cards-col {
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
   gap: 32px;
 }
 .sim-card {
@@ -225,9 +225,9 @@ body, html {
   box-shadow: 0 2px 8px rgba(200,220,255,0.10);
   padding: 28px 24px 22px 24px;
   margin-bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
 }
 .sim-card-yellow {
   background: #fffbe6;
@@ -247,12 +247,12 @@ body, html {
 .sim-card-desc {
   font-size: 1rem;
   color: #444;
-  font-weight: 400;
+font-weight: 400;
 }
 .sim-img-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+display: flex;
+align-items: center;
+justify-content: center;
   margin-left: 56px;
 }
 .sim-img {
@@ -264,7 +264,7 @@ body, html {
 @media (max-width: 1200px) {
   .sim-cards-img-row {
     flex-direction: column;
-    align-items: center;
+align-items: center;
     gap: 24px;
   }
   .sim-cards-col {
@@ -295,15 +295,15 @@ body, html {
   font-weight: 400;
 }
 .sim-scenario-imgs-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+display: flex;
+flex-direction: row;
+justify-content: center;
   gap: 48px;
   margin-bottom: 32px;
 }
 .sim-scenario-img-col {
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
   gap: 32px;
 }
 .sim-scenario-img {
@@ -322,12 +322,12 @@ body, html {
 }
 @media (max-width: 1000px) {
   .sim-scenario-imgs-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
+flex-direction: column;
+align-items: center;
+gap: 24px;
   }
   .sim-scenario-img-col {
-    flex-direction: row;
+flex-direction: row;
     gap: 18px;
     margin-bottom: 18px;
   }
