@@ -51,9 +51,10 @@ body, html {
 }
 
 .logo-icon {
-  width: 56px;
-  height: 56px;
-  margin-right: 18px;
+  width: 200px;
+  height: auto;
+  margin-right: 0;
+  object-fit: contain;
 }
 
 .logo-text {
@@ -97,6 +98,7 @@ body, html {
   color: #1A65D4;
   text-align: center;
   margin-bottom: 16px;
+  margin-top: -45px;
 }
 
 .impact-subtitle {
@@ -440,6 +442,36 @@ body, html {
   line-height: 1.5;
   flex: 1;
   text-align: left;
+}
+
+/* Publications 区块样式 */
+.impact-publications-section {
+  margin-top: 48px;
+}
+
+.impact-publications-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1A65D4;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.impact-publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.impact-publication-item {
+  font-size: 14px;
+  color: #222;
+  line-height: 1.6;
+  text-align: left;
+  padding: 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
 }
 
 @media (max-width: 1300px) {
