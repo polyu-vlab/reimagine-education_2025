@@ -168,6 +168,13 @@ color: #2A2B2F;
   gap: 30px;
 }
 
+.about-visit-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
 .demo-img {
   width: 942px;
   height: 484px;
@@ -210,8 +217,9 @@ color: #2A2B2F;
   color: #1A65D4;
   margin-bottom: 65px;
   line-height: 1.21;
-  width: 1531px;
-  margin-left: 16px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ic-content {
@@ -622,6 +630,10 @@ color: #2A2B2F;
   background-clip: text;
   color: transparent;
   margin-bottom: 24px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 .innov-feature-desc {
   font-size: 1rem;
