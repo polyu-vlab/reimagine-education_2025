@@ -122,7 +122,7 @@ color: #2A2B2F;
 }
 
 .about-description {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   color: #2A2B2F;
   line-height: 1.25;
@@ -140,7 +140,7 @@ color: #2A2B2F;
 }
 
 .about-features li {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--main-blue);
   line-height: 1.25;
@@ -275,7 +275,7 @@ color: #2A2B2F;
 }
 
 .ic-description {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: #000000;
   line-height: 1.25;
@@ -301,7 +301,7 @@ color: #2A2B2F;
 }
 
 .ic-elderly-description {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: #000000;
   line-height: 1.25;
@@ -438,7 +438,7 @@ color: #2A2B2F;
   margin-left: -30px;
 }
 .innov-intro-text {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   color: #2A2B2F;
   line-height: 1.25;
@@ -586,7 +586,7 @@ color: #2A2B2F;
   margin-bottom: 12px;
 }
 .innov-card-desc {
-  font-size: 0.95rem;
+  font-size: 16px;
   color: #000;
   line-height: 1.6;
 }
@@ -602,6 +602,7 @@ color: #2A2B2F;
   padding-left: 20px;
   margin-bottom: 8px;
   line-height: 1.5;
+  font-size: 16px;
 }
 
 .innov-card-list li:before {
@@ -636,7 +637,7 @@ color: #2A2B2F;
   text-align: left;
 }
 .innov-feature-desc {
-  font-size: 1rem;
+  font-size: 16px;
   color: #222;
   margin-bottom: 32px;
   max-width: 1200px;
@@ -781,7 +782,7 @@ align-items: flex-start;
   margin-bottom: 10px;
 }
 .sim-card-desc {
-  font-size: 1rem;
+  font-size: 16px;
   color: #444;
 font-weight: 400;
 }
@@ -825,7 +826,7 @@ align-items: center;
 .sim-scenario-desc {
   max-width: 1200px;
   margin: 0 auto 32px auto;
-  font-size: 1rem;
+  font-size: 16px;
   color: #222;
   text-align: left;
   font-weight: 400;
@@ -851,7 +852,7 @@ flex-direction: column;
 }
 .sim-scenario-desc-bottom {
   margin-top: 32px;
-  font-size: 1rem;
+  font-size: 16px;
   color: #222;
   text-align: left;
   font-weight: 400;

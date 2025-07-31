@@ -109,7 +109,7 @@ body, html {
 }
 
 .impact-desc {
-  font-size: 14px;
+  font-size: 16px;
   color: #222;
   text-align: center;
   margin-bottom: 32px;
@@ -163,7 +163,7 @@ body, html {
 }
 
 .impact-achievement-desc {
-  font-size: 13px;
+  font-size: 16px;
   color: #222;
   margin: 0 16px;
   line-height: 1.5;
@@ -252,7 +252,7 @@ body, html {
 
 .impact-activity-desc {
   flex: 1;
-  font-size: 14px;
+  font-size: 16px;
   color: #222;
   background: none;
   border-radius: 0;
@@ -324,7 +324,7 @@ body, html {
 }
 
 .impact-event-desc {
-  font-size: 13px;
+  font-size: 16px;
   color: #222;
   text-align: left;
   margin: 0 0 16px 0;
@@ -353,7 +353,7 @@ body, html {
 }
 
 .impact-testimonial-quote {
-  font-size: 14px;
+  font-size: 16px;
   color: #222;
   line-height: 1.6;
   margin-bottom: 20px;
@@ -401,7 +401,7 @@ body, html {
 }
 
 .impact-experimental-desc p {
-  font-size: 14px;
+  font-size: 16px;
   color: #222;
   line-height: 1.6;
   margin-bottom: 16px;
@@ -437,7 +437,7 @@ body, html {
 }
 
 .impact-experimental-card-quote {
-  font-size: 13px;
+  font-size: 16px;
   color: #222;
   line-height: 1.5;
   flex: 1;
@@ -464,7 +464,7 @@ body, html {
 }
 
 .impact-publication-item {
-  font-size: 14px;
+  font-size: 16px;
   color: #222;
   line-height: 1.6;
   text-align: left;
