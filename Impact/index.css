@@ -484,36 +484,106 @@ body, html {
   .navbar {
     flex-direction: column;
     height: auto;
-    padding: 1vw 2vw;
-    gap: 0.5rem;
+    padding: 15px 20px;
+    gap: 15px;
   }
   
   .navbar-center {
     flex-wrap: wrap;
-    gap: 1vw;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+  
+  .logo-icon {
+    width: 150px;
   }
   
   .impact-main {
-    padding: 120px 20px 60px 20px;
+    padding: 140px 20px 60px 20px;
   }
   
-  .impact-achievements, .impact-activity-row, .impact-event-row, .impact-testimonials {
+  .impact-title {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin-top: -20px;
+  }
+  
+  .impact-subtitle {
+    font-size: clamp(14px, 3vw, 16px);
+  }
+  
+  .impact-desc {
+    font-size: clamp(14px, 3vw, 16px);
+    text-align: justify;
+    line-height: 1.6;
+  }
+  
+  .impact-achievements, 
+  .impact-activity-row, 
+  .impact-event-row, 
+  .impact-testimonials {
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
+    align-items: center;
   }
   
-  .impact-achievement-card, .impact-activity-img-wrap, .impact-activity-desc, .impact-event-img, .impact-testimonial-card {
+  .impact-achievement-card {
     width: 100%;
-    min-width: 0;
-    max-width: 100vw;
+    max-width: 350px;
+    min-height: auto;
+    height: auto;
+  }
+  
+  .impact-achievement-img {
+    height: 200px;
+  }
+  
+  .impact-activity-img-wrap {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .impact-activity-video {
+    height: 250px !important;
+  }
+  
+  .video-container {
+    height: 250px;
+  }
+  
+  .impact-activity-desc {
+    max-width: 100%;
+    margin-left: 0;
+    text-align: justify;
+  }
+  
+  .impact-activity-btn {
+    margin-left: 0;
+    align-self: center;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
   }
   
   .impact-event-img {
-    height: 100px;
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+  }
+  
+  .impact-event-desc {
+    text-align: justify;
   }
   
   .impact-testimonial-card {
+    width: 100%;
+    max-width: 100%;
     min-height: auto;
+    margin: 0;
   }
   
   .impact-experimental-cards {
@@ -523,5 +593,113 @@ body, html {
   
   .impact-experimental-card {
     min-height: auto;
+    margin: 0;
+  }
+  
+  .impact-experimental-desc p {
+    text-align: justify;
+    font-size: 14px;
+  }
+  
+  .impact-section-title {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .impact-experimental-title,
+  .impact-publications-title {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+  
+  .logo-icon {
+    width: 120px;
+  }
+  
+  .impact-main {
+    padding: 160px 15px 40px 15px;
+  }
+  
+  .impact-title {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+  
+  .impact-subtitle,
+  .impact-desc {
+    font-size: 13px;
+  }
+  
+  .impact-achievement-card {
+    max-width: 100%;
+  }
+  
+  .impact-achievement-img {
+    height: 180px;
+  }
+  
+  .impact-achievement-title {
+    font-size: 14px;
+  }
+  
+  .impact-achievement-desc {
+    font-size: 13px;
+  }
+  
+  .impact-activity-video {
+    height: 200px !important;
+  }
+  
+  .video-container {
+    height: 200px;
+  }
+  
+  .impact-activity-desc {
+    font-size: 13px;
+  }
+  
+  .impact-activity-btn {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+  
+  .impact-event-img {
+    max-width: 100%;
+    height: 150px;
+  }
+  
+  .impact-testimonial-quote {
+    font-size: 14px;
+  }
+  
+  .impact-testimonial-name {
+    font-size: 13px;
+  }
+  
+  .impact-experimental-desc p,
+  .impact-experimental-card-quote,
+  .impact-publication-item {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+  .impact-experimental-card-title {
+    font-size: 14px;
+  }
+  
+  .impact-section-title {
+    font-size: 16px;
+  }
+  
+  .impact-experimental-title,
+  .impact-publications-title {
+    font-size: 18px;
   }
 } 
