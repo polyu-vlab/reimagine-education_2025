@@ -15,7 +15,23 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-// Image paths for GitHub Pages compatibility
+// Image paths for root deployment
+const getImagePath = (imageName: string) => {
+  let basePath = "";
+
+  if (process.env.NODE_ENV === "production") {
+    // If BASE_PATH is explicitly set (even to empty string), use it
+    if (process.env.BASE_PATH !== undefined) {
+      basePath = process.env.BASE_PATH;
+    } else {
+      // Default to root path
+      basePath = "";
+    }
+  }
+
+  return `${basePath}/images/${imageName}`;
+};
+
 const images = {
   polyuLogo: "/images/polyu-logo.png",
   gmailGroups: "/images/gmail_groups.png",
