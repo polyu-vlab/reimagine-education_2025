@@ -216,17 +216,7 @@ export default function HomePage() {
                   </Text>
                 </Card>
 
-                <Button
-                  color="blue"
-                  radius={6}
-                  size="sm"
-                  fullWidth
-                  onClick={() => {
-                    router.push("/impact");
-                  }}
-                >
-                  View Our Impacts
-                </Button>
+
               </Stack>
             </Grid.Col>
           </Grid>
@@ -246,7 +236,7 @@ export default function HomePage() {
                 <Title
                   order={2}
                   size="h3"
-                  className="text-xl font-bold text-blue-900 mb-4"
+                  className="text-xl font-bold text-blue-900 mb-40"
                 >
                   GPTutor: A Generative AI-powered Intelligent Tutoring System
                 </Title>
@@ -274,7 +264,7 @@ export default function HomePage() {
                     size="sm"
                     style={{ color: "#228be6", fontWeight: "600" }}
                   >
-                    experiential, learning activities
+                    experiential learning activities
                   </Text>{" "}
                   tailored for students from 20+ programmes in PolyU&apos;s
                   Industrial Centre. Our{" "}
@@ -297,13 +287,13 @@ export default function HomePage() {
                   <Group gap="sm">
                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                     <Text size="sm" c="gray.9">
-                      Self-Directed Learning
+                      Knowledge-Grounded Question Answering
                     </Text>
                   </Group>
                   <Group gap="sm">
                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                     <Text size="sm" c="gray.9">
-                      Self-Quizzes
+                      Self-Quizzes Generation
                     </Text>
                   </Group>
                   <Group gap="sm">
@@ -378,7 +368,7 @@ export default function HomePage() {
               >
                 <Image
                   src={images.bookOpen2}
-                  alt="Self-Directed Learning"
+                  alt="Knowledge-grounded question answering "
                   w={32}
                   h={32}
                   className="mx-auto mb-4"
@@ -391,7 +381,7 @@ export default function HomePage() {
                   mb="sm"
                   ta="center"
                 >
-                  Self-Directed Learning
+                  Knowledge grounded question answering 
                 </Title>
                 <List
                   size="xs"
@@ -436,7 +426,7 @@ export default function HomePage() {
               >
                 <Image
                   src={images.edit3}
-                  alt="Self-Quizzes"
+                  alt="Self-Quizzes Generation"
                   w={32}
                   h={32}
                   className="mx-auto mb-4"
@@ -449,7 +439,7 @@ export default function HomePage() {
                   mb="sm"
                   ta="center"
                 >
-                  Self-Quizzes
+                  Self-Quizzes Generation
                 </Title>
                 <List
                   size="xs"
@@ -550,38 +540,41 @@ export default function HomePage() {
           <Title
             order={2}
             size="h3"
-            className="text-xl font-bold text-blue-600 mb-6"
+            className="text-xl font-bold text-blue-600 mb-16"
           >
-            Self-Directed Learning
+            Knowledge-Grounded Question Answering
           </Title>
+          
+          <Grid gutter="xl" align="start" className="mt-6">
+            <Grid.Col span={{ base: 12, md: 4 }} >
+              <Text size="sm" c="gray.7" style={{ lineHeight: 1.6 }}  >
 
-          <Text size="sm" c="gray.7" style={{ lineHeight: 1.6 }} mb="lg">
-            Instructors can upload their course contents to the asset library
-            and create learning modules based on the learning content. Students
-            may engage in self-directed learning by asking questions about their
-            learning content and navigating and visualising the concepts to
-            explore and deepen their understandings of the learning content at
-            their own pace. Based on users&apos; questions, the relevant
-            learning content will be retrieved for the generative AI models to
-            provide the answer. Reference links to the learning content will be
-            provided so that students can validate the factuality of the
-            AI-generated content.
-          </Text>
-
-          <div className="flex justify-center w-full">
-            <Image
-              src={images.selfDirectedLearning}
-              alt="Self-Directed Learning Interface Screenshot"
-              w={700}
-              h={400}
-              fit="contain"
-              radius={6}
-              className="rounded-lg "
-            />
-          </div>
-          <div className="text-blue-600 text-sm font-semibold text-center pt-4">
-            Self-Directed Learning
-          </div>
+                Instructors can upload their course contents to the asset library
+                and create learning modules based on the learning content. Students
+                may engage in self-directed learning by asking questions about their
+                learning content and navigating and visualising the concepts to
+                explore and deepen their understandings of the learning content at
+                their own pace. Based on users&apos; questions, the relevant
+                learning content will be retrieved for the generative AI models to
+                provide the answer. Reference links to the learning content will be
+                provided so that students can validate the factuality of the
+                AI-generated content.
+              </Text>
+            </Grid.Col>
+            <Grid.Col span={{ base: 12, md: 8 }}>
+              <div className="flex justify-center w-full">
+                <Image
+                  src={images.selfDirectedLearning}
+                  alt="Self-Directed Learning Interface Screenshot"
+                  w={700}
+                  h={400}
+                  fit="contain"
+                  radius={6}
+                  className="rounded-lg "
+                />
+              </div>
+            </Grid.Col>
+          </Grid>
         </motion.div>
 
         {/* Self-Quizzes Detail Section */}
@@ -592,38 +585,42 @@ export default function HomePage() {
           viewport={{ once: true }}
           className="mb-16"
         >
+
           <Title
             order={2}
             size="h3"
             className="text-xl font-bold text-blue-600 mb-6"
           >
-            Self-Quizzes
+            Self-Quizzes Generation
           </Title>
 
-          <Text size="sm" c="gray.7" style={{ lineHeight: 1.6 }} mb="lg">
-            Students often face tight review schedules before exams, especially
-            when understanding complex concepts. GPTutor includes features for
-            students to generate practice questions of varying difficulty levels
-            based on the course material, helping students reinforce their
-            understanding. The immediate feedback and explanations provide
-            students with timely reinforcement and correction of
-            misunderstandings.
-          </Text>
+          <Grid gutter="xl" align="start" className="mt-6">
+            <Grid.Col span={{ base: 12, md: 4 }}>
+              <Text size="sm" c="gray.7" style={{ lineHeight: 1.6 }} mb="lg">
+                Students often face tight review schedules before exams, especially
+                when understanding complex concepts. GPTutor includes features for
+                students to generate practice questions of varying difficulty levels
+                based on the course material, helping students reinforce their
+                understanding. The immediate feedback and explanations provide
+                students with timely reinforcement and correction of
+                misunderstandings.
+              </Text>
+            </Grid.Col>
+            <Grid.Col span={{ base: 12, md: 8 }}>
+              <div className="flex justify-center w-full">
+                <Image
+                  src={images.gptutorQuiz1}
+                  alt="Self-Directed Learning Interface Screenshot"
+                  w={700}
+                  h={480}
+                  fit="contain"
+                  radius={6}
+                  className="rounded-lg "
+                />
+              </div>
+            </Grid.Col>
+          </Grid>
 
-          <div className="flex justify-center w-full">
-            <Image
-              src={images.gptutorQuiz1}
-              alt="Self-Directed Learning Interface Screenshot"
-              w={700}
-              h={480}
-              fit="contain"
-              radius={6}
-              className="rounded-lg "
-            />
-          </div>
-          <div className="text-blue-600 text-sm font-semibold text-center pt-4">
-            Self-Quizzes
-          </div>
         </motion.div>
 
         {/* Simulation-Based Learning Detail Section */}
@@ -775,7 +772,7 @@ export default function HomePage() {
           </Title>
 
           <Grid gutter="xl">
-            <Grid.Col span={{ base: 12, md: 5 }}>
+            <Grid.Col span={{ base: 12, md: 6 }}>
               <div className="relative h-60 md:h-80 rounded-lg overflow-hidden">
                 <iframe
                   src="https://www.youtube.com/embed/Yblj9QsRI3k"
@@ -786,7 +783,7 @@ export default function HomePage() {
                 />
               </div>
             </Grid.Col>
-            <Grid.Col span={{ base: 12, md: 7 }}>
+            <Grid.Col span={{ base: 12, md: 6 }}>
               <Stack gap="md" className="pb-4">
                 <Text size="sm" c="gray.7" style={{ lineHeight: 1.6 }}>
                   The{" "}

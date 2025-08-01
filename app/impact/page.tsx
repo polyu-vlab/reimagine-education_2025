@@ -103,8 +103,8 @@ export default function ImpactPage() {
           animate="animate"
           className="mb-12 "
         >
-          <Text size="sm" c="gray.7" style={{ lineHeight: 1.6 }}>
-            Our innovative GPTutor project was shortlisted for{" "}
+          <Text size="md" c="gray.7" style={{ lineHeight: 1.6 }}>
+            Our innovative GPTutor platform was shortlisted for{" "}
             <strong>2024 QS Reimagine Education Awards</strong> in the AI in
             Education category. Since then, we have made significant progress in
             enhancing the platform features, developing new simulation
@@ -137,7 +137,7 @@ export default function ImpactPage() {
               {
                 title: "Shortlisted for 2024 QS Reimagine Education Awards",
                 description:
-                  "In the past year, over 3,000 students from more than 20 departments and schools have used GPTutor to support their learning across 15+ courses.",
+                  "Our GPTutor platform was shortlisted for 2024 QS Reimagine Education Awards in the AI in Education category.",
                 image: "/images/achievement1.png",
               },
               {
@@ -278,13 +278,12 @@ export default function ImpactPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title
-            order={2}
-            size="h2"
-            className="text-xl font-bold text-blue-900 pb-4"
-          >
-            Event Details
-          </Title>
+            <Text size="sm" c="gray.7" style={{ lineHeight: 1.6 }} >
+              During the forum, students in the School of Optometry shared their
+              experiences, highlighting how the virtual patient simulation in
+              GPTutor brings clinical scenarios to life, boosts confidence, and
+              offers a safe environment for practicing complex cases.
+            </Text>
 
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             <Image
@@ -305,20 +304,7 @@ export default function ImpactPage() {
             />
           </div>
 
-          <Card
-            shadow="sm"
-            padding="lg"
-            radius={6}
-            withBorder
-            className="bg-white"
-          >
-            <Text size="sm" c="gray.7" style={{ lineHeight: 1.6 }}>
-              During the forum, students in the School of Optometry shared their
-              experiences, highlighting how the virtual patient simulation in
-              GPTutor brings clinical scenarios to life, boosts confidence, and
-              offers a safe environment for practicing complex cases.
-            </Text>
-          </Card>
+
         </motion.div>
 
         {/* Student Testimonials */}
