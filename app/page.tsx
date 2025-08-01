@@ -13,7 +13,7 @@ import {
   Image,
 } from "@mantine/core";
 import Link from "next/link";
-import router from "next/router";
+import { useRouter } from "next/navigation";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -22,6 +22,8 @@ const fadeInUp = {
 };
 
 export default function HomePage() {
+  const router = useRouter();
+
   return (
     <div
       className="min-h-screen"
@@ -90,9 +92,9 @@ export default function HomePage() {
           className="mb-16"
         >
           <Grid gutter="md">
-            <Grid.Col span={{ base: 12, md: 6 }}>
+            <Grid.Col span={{ base: 12, md: 7 }}>
               <Stack className="items-center justify-center h-full">
-                <div className="relative flex items-center justify-center h-[320px] bg-gray-900 rounded-lg overflow-hidden">
+                <div className="relative flex items-center justify-center h-[400px] bg-gray-900 rounded-lg overflow-hidden">
                   <iframe
                     src="https://www.youtube.com/embed/xZC59Ulg3hg"
                     title="AI Literacy to Workplace Excellence"
@@ -104,10 +106,10 @@ export default function HomePage() {
               </Stack>
             </Grid.Col>
 
-            <Grid.Col span={{ base: 12, md: 6 }}>
+            <Grid.Col span={{ base: 12, md: 5 }}>
               <Stack gap="md">
                 <Grid gutter="xs">
-                  <Grid.Col span={4}>
+                  <Grid.Col span={6}>
                     <Card
                       shadow="sm"
                       padding="md"
@@ -129,7 +131,7 @@ export default function HomePage() {
                       </Text>
                     </Card>
                   </Grid.Col>
-                  <Grid.Col span={4}>
+                  <Grid.Col span={6}>
                     <Card
                       shadow="sm"
                       padding="md"
@@ -148,28 +150,6 @@ export default function HomePage() {
                       </Text>
                       <Text size="sm" c="gray.6">
                         Departments
-                      </Text>
-                    </Card>
-                  </Grid.Col>
-                  <Grid.Col span={4}>
-                    <Card
-                      shadow="sm"
-                      padding="md"
-                      radius={6}
-                      className="bg-orange-50 text-center"
-                    >
-                      <Image
-                        src="/images/mood.png"
-                        alt="Satisfaction"
-                        w={32}
-                        h={32}
-                        className="mx-auto mb-2"
-                      />
-                      <Text size="xl" fw={700} c="orange.7">
-                        95.8%
-                      </Text>
-                      <Text size="sm" c="gray.6">
-                        Course Completion
                       </Text>
                     </Card>
                   </Grid.Col>
@@ -292,7 +272,19 @@ export default function HomePage() {
                   </Group>
                 </Stack>
 
-                <Button color="blue" radius={6} size="sm" className="w-fit">
+                <Button
+                  color="blue"
+                  radius={6}
+                  size="sm"
+                  className="w-fit"
+                  onClick={() => {
+                    window.open(
+                      "https://gptutor.comp.polyu.edu.hk",
+                      "_blank",
+                      "noopener,noreferrer"
+                    );
+                  }}
+                >
                   Visit GPTutor Platform
                 </Button>
               </Stack>
