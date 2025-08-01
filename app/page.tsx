@@ -77,7 +77,7 @@ export default function HomePage() {
             size="h1"
             className="text-2xl md:text-3xl font-bold text-blue-900 mb-4"
           >
-            AI Literacy in Workplace Excellence: Transforming Education for
+            AI Literacy to Workplace Excellence: Transforming Education for
             Next-Generation Professionals
           </Title>
         </motion.div>
@@ -737,7 +737,7 @@ export default function HomePage() {
             size="h3"
             className="text-xl font-bold text-blue-600 pb-4"
           >
-            PolyU Industrial Centre (IC) Visit: Unlock the Experience
+            PolyU Industrial Centre (IC) Visit
           </Title>
 
           <Grid gutter="xl">
