@@ -5,6 +5,15 @@ import { Button, Card, Text, Title, Badge, Group, Stack } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
 
+// Image paths for GitHub Pages compatibility
+const images = {
+  polyuLogo: "/images/polyu-logo.png",
+  event1: "/images/event1.png",
+  event2: "/images/event2.png",
+  student1: "/images/student1.png",
+  student2: "/images/student2.png",
+};
+
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
@@ -25,7 +34,7 @@ export default function ImpactPage() {
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <Image
-              src="/images/polyu-logo.png"
+              src={images.polyuLogo}
               alt="The Hong Kong Polytechnic University"
               width={200}
               height={40}
@@ -65,7 +74,7 @@ export default function ImpactPage() {
           <Title
             order={1}
             size="h1"
-            className="text-3xl font-bold text-blue-700 "
+            className="text-3xl font-bold text-blue-900 "
           >
             Project Impact
           </Title>
@@ -102,7 +111,7 @@ export default function ImpactPage() {
           <Title
             order={2}
             size="h2"
-            className="text-xl font-bold text-blue-700 pb-4"
+            className="text-xl font-bold text-blue-900 pb-4"
           >
             Our Achievements:
           </Title>
@@ -175,7 +184,7 @@ export default function ImpactPage() {
           <Title
             order={2}
             size="h2"
-            className="text-xl font-bold text-blue-700 pb-4"
+            className="text-xl font-bold text-blue-900 pb-4"
           >
             Activity Highlights
           </Title>
@@ -256,14 +265,14 @@ export default function ImpactPage() {
           <Title
             order={2}
             size="h2"
-            className="text-xl font-bold text-blue-700 pb-4"
+            className="text-xl font-bold text-blue-900 pb-4"
           >
             Event Details
           </Title>
 
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             <Image
-              src="/images/event1.png"
+              src={images.event1}
               alt="Student presenting at conference"
               width={400}
               height={250}
@@ -271,7 +280,7 @@ export default function ImpactPage() {
               style={{ borderRadius: "6px" }}
             />
             <Image
-              src="/images/event2.png"
+              src={images.event2}
               alt="Conference group photo"
               width={400}
               height={250}
@@ -308,7 +317,7 @@ export default function ImpactPage() {
             <Title
               order={2}
               size="h2"
-              className="text-xl font-bold text-blue-700"
+              className="text-xl font-bold text-blue-900"
             >
               Student Voices
             </Title>
@@ -324,7 +333,7 @@ export default function ImpactPage() {
             >
               <Stack align="center" mb="md">
                 <Image
-                  src="/images/student1.png"
+                  src={images.student1}
                   alt="Male optometry student"
                   width={64}
                   height={64}
@@ -341,15 +350,15 @@ export default function ImpactPage() {
                 fs="italic"
                 style={{ lineHeight: 1.6 }}
               >
-                "Using GPTutor feels like having a patient right in front of me
-                which really brings the clinical experience to life. It's helped
-                me connect what I've learned in pharmacology and pathology to
-                real cases, making the learning process more meaningful. As I am
-                still in clinical placements, I find it very reassuring to
-                practice with rare and tricky eye conditions that I might not
-                see throughout my clinical rotations. GPTutor has definitely
-                boosted my confidence and made me feel more prepared to care for
-                real patients."
+                &quot;Using GPTutor feels like having a patient right in front
+                of me which really brings the clinical experience to life.
+                It&apos;s helped me connect what I&apos;ve learned in
+                pharmacology and pathology to real cases, making the learning
+                process more meaningful. As I am still in clinical placements, I
+                find it very reassuring to practice with rare and tricky eye
+                conditions that I might not see throughout my clinical
+                rotations. GPTutor has definitely boosted my confidence and made
+                me feel more prepared to care for real patients.&quot;
               </Text>
             </Card>
 
@@ -362,7 +371,7 @@ export default function ImpactPage() {
             >
               <Stack align="center" mb="md">
                 <Image
-                  src="/images/student2.png"
+                  src={images.student2}
                   alt="Female optometry student"
                   width={64}
                   height={64}
@@ -379,11 +388,11 @@ export default function ImpactPage() {
                 fs="italic"
                 style={{ lineHeight: 1.6 }}
               >
-                "Chatting with virtual patients is less stressful than being in
-                the clinic because if I make a mistake, I can try again. I can
-                also talk to the AI assistant to learn more about the
-                conditions, so I feel better prepared when I encounter the same
-                conditions in real patients."
+                &quot;Chatting with virtual patients is less stressful than
+                being in the clinic because if I make a mistake, I can try
+                again. I can also talk to the AI assistant to learn more about
+                the conditions, so I feel better prepared when I encounter the
+                same conditions in real patients.&quot;
               </Text>
             </Card>
           </div>
@@ -400,7 +409,7 @@ export default function ImpactPage() {
           <Title
             order={2}
             size="h2"
-            className="text-xl font-bold text-blue-700 pb-4"
+            className="text-xl font-bold text-blue-900 pb-4"
           >
             Impacts of Experimental Learning
           </Title>
@@ -422,8 +431,9 @@ export default function ImpactPage() {
               results show that 89% of the students agree/strongly agree that
               the experiential learning activity at PolyU IC is useful to help
               them better connect AI with their disciplines and future careers.
-              From the students' reflection reports, the experiential learning
-              activities enable the students to connect to their future careers.
+              From the students&apos; reflection reports, the experiential
+              learning activities enable the students to connect to their future
+              careers.
             </Text>
           </Stack>
           <div className="grid md:grid-cols-3 gap-6">
@@ -488,7 +498,7 @@ export default function ImpactPage() {
                   fs="italic"
                   style={{ lineHeight: 1.5 }}
                 >
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </Text>
               </Card>
             ))}
@@ -506,7 +516,7 @@ export default function ImpactPage() {
           <Title
             order={2}
             size="h2"
-            className="text-xl font-bold text-blue-700 pb-4"
+            className="text-xl font-bold text-blue-900 pb-4"
           >
             Publications
           </Title>
@@ -521,11 +531,11 @@ export default function ImpactPage() {
             >
               <Text fw={400} c="gray.9" size="sm">
                 Richard Wing Cheung Lui, Haoran Bai, Aiden Wen Yi Zhang, and
-                Elvin Tsun Him Chu, "GPTutor: A Generative AI-powered
+                Elvin Tsun Him Chu, &quot;GPTutor: A Generative AI-powered
                 Intelligent Tutoring System to Support Interactive Learning with
-                Knowledge-Grounded Question Answering," in 2024 International
-                Conference on Advances in Electrical Engineering and Computer
-                Applications (AEECA), pp. 702-707, IEEE, 2024. [
+                Knowledge-Grounded Question Answering,&quot; in 2024
+                International Conference on Advances in Electrical Engineering
+                and Computer Applications (AEECA), pp. 702-707, IEEE, 2024. [
                 <a
                   href="https://ieeexplore.ieee.org/document/10898626"
                   target="_blank"
@@ -547,9 +557,9 @@ export default function ImpactPage() {
             >
               <Text fw={400} c="gray.9" size="sm">
                 Haoran Bai, Richard Wing Cheung, and Paul Vinod Khiatani,
-                "Promoting Student Engagement with GPTutor: An Intelligent
-                Tutoring System Powered by Generative AI," manuscript submitted
-                for publication.
+                &quot;Promoting Student Engagement with GPTutor: An Intelligent
+                Tutoring System Powered by Generative AI,&quot; manuscript
+                submitted for publication.
               </Text>
             </Card>
           </Stack>

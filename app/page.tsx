@@ -15,6 +15,32 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
+// Image paths for GitHub Pages compatibility
+const images = {
+  polyuLogo: "/images/polyu-logo.png",
+  gmailGroups: "/images/gmail_groups.png",
+  bookOpen: "/images/book-open.png",
+  gpthomepage: "/images/gpthomepage.png",
+  bookOpen2: "/images/book-open2.png",
+  edit3: "/images/edit3.png",
+  comment: "/images/comment.png",
+  selfDirectedLearning: "/images/self-directed-learning.png",
+  gptutorQuiz1: "/images/gptutor-quiz1.png",
+  simulation: "/images/simulation.png",
+  simIcon: "/images/sim-icon.png",
+  simBg: "/images/sim-bg.png",
+  simActions: "/images/sim-actions.png",
+  simEditact: "/images/sim-editact.png",
+  elderly1: "/images/elderly1.png",
+  elderly2: "/images/elderly2.png",
+  elderly3: "/images/elderly3.png",
+  robot1: "/images/robot1.png",
+  robot2: "/images/robot2.jpg",
+  robot3: "/images/robot3.jpg",
+  warehouse1: "/images/warehouse1.png",
+  warehouse2: "/images/warehouse2.png",
+};
+
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
@@ -37,7 +63,7 @@ export default function HomePage() {
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <Image
-              src="/images/polyu-logo.png"
+              src={images.polyuLogo}
               alt="The Hong Kong Polytechnic University"
               width={200}
               height={40}
@@ -117,7 +143,7 @@ export default function HomePage() {
                       className="bg-blue-50 text-center"
                     >
                       <Image
-                        src="/images/gmail_groups.png"
+                        src={images.gmailGroups}
                         alt="Students"
                         w={32}
                         h={32}
@@ -139,7 +165,7 @@ export default function HomePage() {
                       className="bg-green-50 text-center"
                     >
                       <Image
-                        src="/images/book-open.png"
+                        src={images.bookOpen}
                         alt="Departments"
                         w={32}
                         h={32}
@@ -292,7 +318,7 @@ export default function HomePage() {
 
             <Grid.Col span={{ base: 12, md: 7 }} pr="0" pl="20px">
               <Image
-                src="/images/gpthomepage.png"
+                src={images.gpthomepage}
                 alt="GPTutor Interface Screenshot"
                 fit="contain"
               />
@@ -335,7 +361,7 @@ export default function HomePage() {
                 }}
               >
                 <Image
-                  src="/images/book-open2.png"
+                  src={images.bookOpen2}
                   alt="Self-Directed Learning"
                   w={32}
                   h={32}
@@ -393,7 +419,7 @@ export default function HomePage() {
                 }}
               >
                 <Image
-                  src="/images/edit3.png"
+                  src={images.edit3}
                   alt="Self-Quizzes"
                   w={32}
                   h={32}
@@ -451,7 +477,7 @@ export default function HomePage() {
                 }}
               >
                 <Image
-                  src="/images/comment.png"
+                  src={images.comment}
                   alt="Simulation-Based Learning"
                   w={32}
                   h={32}
@@ -528,7 +554,7 @@ export default function HomePage() {
 
           <div className="flex justify-center w-full">
             <Image
-              src="/images/self-directed-learning.png"
+              src={images.selfDirectedLearning}
               alt="Self-Directed Learning Interface Screenshot"
               w={700}
               h={400}
@@ -570,7 +596,7 @@ export default function HomePage() {
 
           <div className="flex justify-center w-full">
             <Image
-              src="/images/gptutor-quiz1.png"
+              src={images.gptutorQuiz1}
               alt="Self-Directed Learning Interface Screenshot"
               w={700}
               h={480}
@@ -641,7 +667,7 @@ export default function HomePage() {
             </Stack>
             <div className="w-full lg:w-auto lg:flex-1 min-w-96 flex justify-center">
               <Image
-                src="/images/simulation.png"
+                src={images.simulation}
                 alt="Simulation-Based Learning Interface Screenshot"
                 h={350}
                 className="w-full max-w-lg rounded-lg "
@@ -678,7 +704,7 @@ export default function HomePage() {
             <Grid.Col span={{ base: 12, md: 6 }}>
               <Stack gap="0">
                 <Image
-                  src="/images/sim-icon.png"
+                  src={images.simIcon}
                   alt="Jackson L. Profile Icon"
                   h={400}
                   fit="contain"
@@ -686,7 +712,7 @@ export default function HomePage() {
                 />
 
                 <Image
-                  src="/images/sim-bg.png"
+                  src={images.simBg}
                   alt="Background Image for Simulation"
                   fit="contain"
                   h={400}
@@ -697,7 +723,7 @@ export default function HomePage() {
             <Grid.Col span={{ base: 12, md: 6 }}>
               <Stack gap="0">
                 <Image
-                  src="/images/sim-actions.png"
+                  src={images.simActions}
                   alt="Actions Panel Interface"
                   fit="contain"
                   h={400}
@@ -705,7 +731,7 @@ export default function HomePage() {
                 />
 
                 <Image
-                  src="/images/sim-editact.png"
+                  src={images.simEditact}
                   alt="Edit Action Interface"
                   fit="contain"
                   h={400}
@@ -804,7 +830,7 @@ export default function HomePage() {
               <Grid.Col span={{ base: 12, md: 4 }}>
                 <div className="flex flex-col items-center">
                   <Image
-                    src="/images/elderly1.png"
+                    src={images.elderly1}
                     alt="Students learning about control panels"
                     w={400}
                     h={200}
@@ -819,7 +845,7 @@ export default function HomePage() {
               <Grid.Col span={{ base: 12, md: 4 }}>
                 <div className="flex flex-col items-center">
                   <Image
-                    src="/images/elderly2.png"
+                    src={images.elderly2}
                     alt="Students trying to control automated cupboards"
                     w={400}
                     h={200}
@@ -834,7 +860,7 @@ export default function HomePage() {
               <Grid.Col span={{ base: 12, md: 4 }}>
                 <div className="flex flex-col items-center">
                   <Image
-                    src="/images/elderly3.png"
+                    src={images.elderly3}
                     alt="The teacher presenting assistive tools for seniors"
                     w={400}
                     h={200}
@@ -868,7 +894,7 @@ export default function HomePage() {
               <Grid.Col span={{ base: 12, md: 4 }}>
                 <div className="flex flex-col items-center">
                   <Image
-                    src="/images/robot1.png"
+                    src={images.robot1}
                     alt="Students operating Kuka Robot"
                     w={400}
                     h={200}
@@ -883,7 +909,7 @@ export default function HomePage() {
               <Grid.Col span={{ base: 12, md: 4 }}>
                 <div className="flex flex-col items-center">
                   <Image
-                    src="/images/robot2.jpg"
+                    src={images.robot2}
                     alt="Students chatting with NAO bot"
                     w={400}
                     h={200}
@@ -898,7 +924,7 @@ export default function HomePage() {
               <Grid.Col span={{ base: 12, md: 4 }}>
                 <div className="flex flex-col items-center">
                   <Image
-                    src="/images/robot3.jpg"
+                    src={images.robot3}
                     alt="Students trying to control the robot dog through remote panel"
                     w={400}
                     h={200}
@@ -932,7 +958,7 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row justify-center items-center gap-8">
               <div className="flex flex-col items-center w-full md:w-auto">
                 <Image
-                  src="/images/warehouse1.png"
+                  src={images.warehouse1}
                   alt="Smart Delivery System"
                   w={400}
                   h={250}
@@ -945,7 +971,7 @@ export default function HomePage() {
               </div>
               <div className="flex flex-col items-center w-full md:w-auto">
                 <Image
-                  src="/images/warehouse2.png"
+                  src={images.warehouse2}
                   alt="QLab Autonomous Car and Drone"
                   w={400}
                   h={250}
