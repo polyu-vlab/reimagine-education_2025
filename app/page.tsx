@@ -15,7 +15,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-// Image paths for GitHub Pages compatibility
+// Image paths for root deployment
 const getImagePath = (imageName: string) => {
   let basePath = "";
 
@@ -24,8 +24,8 @@ const getImagePath = (imageName: string) => {
     if (process.env.BASE_PATH !== undefined) {
       basePath = process.env.BASE_PATH;
     } else {
-      // Default to GitHub Pages base path
-      basePath = "/reimagine-education_2025";
+      // Default to root path
+      basePath = "";
     }
   }
 
