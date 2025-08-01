@@ -28,6 +28,9 @@ const images = {
   event2: getImagePath("event2.png"),
   student1: getImagePath("student1.png"),
   student2: getImagePath("student2.png"),
+  achievement1: getImagePath("achievement1.png"),
+  achievement2: getImagePath("achievement2.png"),
+  achievement3: getImagePath("achievement3.png"),
 };
 
 const fadeInUp = {
@@ -138,19 +141,19 @@ export default function ImpactPage() {
                 title: "Shortlisted for 2024 QS Reimagine Education Awards",
                 description:
                   "In the past year, over 3,000 students from more than 20 departments and schools have used GPTutor to support their learning across 15+ courses.",
-                image: "/images/achievement1.png",
+                image: images.achievement1,
               },
               {
                 title: "User-Friendly and Effective",
                 description:
                   "Our studies demonstrated a positive correlation between GPTutor usage and improved academic performance, with 95.8% of students finding the platform easy to use and 87.5% of students agreeing that it was useful for their learning.",
-                image: "/images/achievement2.png",
+                image: images.achievement2,
               },
               {
                 title: "Showcase at International Conferences",
                 description:
                   "Our project was featured at various international conferences, including the Times Higher Education (THE) Global AI Forum 2024.",
-                image: "/images/achievement3.png",
+                image: images.achievement3,
               },
             ].map((achievement, index) => (
               <Card
