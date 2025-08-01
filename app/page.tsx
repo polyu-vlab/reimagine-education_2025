@@ -595,7 +595,7 @@ export default function HomePage() {
           </Title>
 
           <Grid gutter="xl" align="start" className="mt-6">
-            <Grid.Col span={{ base: 12, md: 4 }}>
+            <Grid.Col span={{ base: 12, md: 4.5 }}>
               <Text size="sm" c="gray.7" style={{ lineHeight: 1.6 }} mb="lg">
                 Students often face tight review schedules before exams, especially
                 when understanding complex concepts. GPTutor includes features for
@@ -606,7 +606,7 @@ export default function HomePage() {
                 misunderstandings.
               </Text>
             </Grid.Col>
-            <Grid.Col span={{ base: 12, md: 8 }}>
+            <Grid.Col span={{ base: 12, md: 7.5 }}>
               <div className="flex justify-center w-full">
                 <Image
                   src={images.gptutorQuiz1}
