@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "build:github": "BASE_PATH=/reimagine-education_2025 next build",
+    "build:proxy": "BASE_PATH= next build",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start"

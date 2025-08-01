@@ -16,29 +16,45 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 // Image paths for GitHub Pages compatibility
+const getImagePath = (imageName: string) => {
+  let basePath = "";
+
+  if (process.env.NODE_ENV === "production") {
+    // If BASE_PATH is explicitly set (even to empty string), use it
+    if (process.env.BASE_PATH !== undefined) {
+      basePath = process.env.BASE_PATH;
+    } else {
+      // Default to GitHub Pages base path
+      basePath = "/reimagine-education_2025";
+    }
+  }
+
+  return `${basePath}/images/${imageName}`;
+};
+
 const images = {
-  polyuLogo: "/images/polyu-logo.png",
-  gmailGroups: "/images/gmail_groups.png",
-  bookOpen: "/images/book-open.png",
-  gpthomepage: "/images/gpthomepage.png",
-  bookOpen2: "/images/book-open2.png",
-  edit3: "/images/edit3.png",
-  comment: "/images/comment.png",
-  selfDirectedLearning: "/images/self-directed-learning.png",
-  gptutorQuiz1: "/images/gptutor-quiz1.png",
-  simulation: "/images/simulation.png",
-  simIcon: "/images/sim-icon.png",
-  simBg: "/images/sim-bg.png",
-  simActions: "/images/sim-actions.png",
-  simEditact: "/images/sim-editact.png",
-  elderly1: "/images/elderly1.png",
-  elderly2: "/images/elderly2.png",
-  elderly3: "/images/elderly3.png",
-  robot1: "/images/robot1.png",
-  robot2: "/images/robot2.jpg",
-  robot3: "/images/robot3.jpg",
-  warehouse1: "/images/warehouse1.png",
-  warehouse2: "/images/warehouse2.png",
+  polyuLogo: getImagePath("polyu-logo.png"),
+  gmailGroups: getImagePath("gmail_groups.png"),
+  bookOpen: getImagePath("book-open.png"),
+  gpthomepage: getImagePath("gpthomepage.png"),
+  bookOpen2: getImagePath("book-open2.png"),
+  edit3: getImagePath("edit3.png"),
+  comment: getImagePath("comment.png"),
+  selfDirectedLearning: getImagePath("self-directed-learning.png"),
+  gptutorQuiz1: getImagePath("gptutor-quiz1.png"),
+  simulation: getImagePath("simulation.png"),
+  simIcon: getImagePath("sim-icon.png"),
+  simBg: getImagePath("sim-bg.png"),
+  simActions: getImagePath("sim-actions.png"),
+  simEditact: getImagePath("sim-editact.png"),
+  elderly1: getImagePath("elderly1.png"),
+  elderly2: getImagePath("elderly2.png"),
+  elderly3: getImagePath("elderly3.png"),
+  robot1: getImagePath("robot1.png"),
+  robot2: getImagePath("robot2.jpg"),
+  robot3: getImagePath("robot3.jpg"),
+  warehouse1: getImagePath("warehouse1.png"),
+  warehouse2: getImagePath("warehouse2.png"),
 };
 
 const fadeInUp = {

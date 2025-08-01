@@ -6,12 +6,28 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Image paths for GitHub Pages compatibility
+const getImagePath = (imageName: string) => {
+  let basePath = "";
+
+  if (process.env.NODE_ENV === "production") {
+    // If BASE_PATH is explicitly set (even to empty string), use it
+    if (process.env.BASE_PATH !== undefined) {
+      basePath = process.env.BASE_PATH;
+    } else {
+      // Default to GitHub Pages base path
+      basePath = "/reimagine-education_2025";
+    }
+  }
+
+  return `${basePath}/images/${imageName}`;
+};
+
 const images = {
-  polyuLogo: "/images/polyu-logo.png",
-  event1: "/images/event1.png",
-  event2: "/images/event2.png",
-  student1: "/images/student1.png",
-  student2: "/images/student2.png",
+  polyuLogo: getImagePath("polyu-logo.png"),
+  event1: getImagePath("event1.png"),
+  event2: getImagePath("event2.png"),
+  student1: getImagePath("student1.png"),
+  student2: getImagePath("student2.png"),
 };
 
 const fadeInUp = {
