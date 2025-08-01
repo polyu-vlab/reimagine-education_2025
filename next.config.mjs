@@ -1,7 +1,12 @@
+const isProd = process.env.NODE_ENV === "production";
+
+const BASE_PATH = "/reimagine-education_2025";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/reimagine-education_2025",
+  assetPrefix: isProd ? BASE_PATH : "",
+  basePath: BASE_PATH,
   eslint: {
     ignoreDuringBuilds: true,
   },
