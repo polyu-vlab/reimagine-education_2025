@@ -108,7 +108,7 @@ export default function AILiteracyPage() {
           </p>
           <Title
             order={1}
-            className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-5"
+            className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-8"
           >
             AI Literacy Education with Experiential Learning
           </Title>
@@ -121,6 +121,12 @@ export default function AILiteracyPage() {
             for all undergraduate students, regardless of discipline. PolyU is among
             the first universities in Hong Kong to make AI a university-wide
             requirement for a large and diverse student population across disciplines.
+
+            In COMP1004, a subject serving over{" "}
+                  <strong>1,600 Year 1 students annually</strong> from more than{" "}
+                  <strong>20 programmes</strong>, students are introduced to emerging
+                  generative AI technologies, their applications, and their implications
+                  for society and professional practice. 
           </Text>
         </motion.div>
 
@@ -133,19 +139,12 @@ export default function AILiteracyPage() {
           className="mb-16"
         >
           <Grid gutter="xl" align="start">
-            <Grid.Col span={{ base: 12, md: 6 }}>
+            <Grid.Col span={{ base: 12, md: 5 }}>
               <Stack gap="md">
-                <Title order={2} size="h3" className="text-xl font-bold text-blue-800">
-                  COMP1004: Introduction to AI and Data Analytics
-                </Title>
+  
                 <Text size="sm" c="gray.7" style={{ lineHeight: 1.75 }}>
-                  In COMP1004, a subject serving over{" "}
-                  <strong>1,600 Year 1 students annually</strong> from more than{" "}
-                  <strong>20 programmes</strong>, students are introduced to emerging
-                  generative AI technologies, their applications, and their implications
-                  for society and professional practice. Rather than treating AI as an
-                  isolated technical topic, we help students understand its societal
-                  impact through experiential learning activities.
+ 
+                  
                 </Text>
                 <Text size="sm" c="gray.7" style={{ lineHeight: 1.75 }}>
                   Students visit the{" "}

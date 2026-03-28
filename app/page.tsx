@@ -67,7 +67,7 @@ export default function HomePage() {
         >
           <Title
             order={1}
-            className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-10"
+            className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-14"
           >
             Nurturing Workplace-Ready Professionals in the Age of AI
           </Title>

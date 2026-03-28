@@ -1,4 +1,3 @@
-"use client";
 
 import { motion } from "framer-motion";
 import { Text, Title, Grid, Stack } from "@mantine/core";
@@ -57,7 +56,7 @@ export default function GPTutorPage() {
           </p>
           <Title
             order={1}
-            className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-5"
+            className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-8"
           >
             GPTutor: A GenAI-Powered Learning Platform
           </Title>

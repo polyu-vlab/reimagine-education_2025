@@ -45,7 +45,7 @@ export default function ProjectBasedLearningPage() {
           </p>
           <Title
             order={1}
-            className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-5"
+            className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-8"
           >
             Project-Based Learning with Assessment Redesigned
           </Title>
@@ -69,9 +69,7 @@ export default function ProjectBasedLearningPage() {
           <Grid gutter="xl" align="start">
             <Grid.Col span={{ base: 12, md: 4 }}>
               <Stack gap="lg">
-                <Title order={2} size="h3" className="text-xl font-bold text-blue-800">
-                  Projects-based learning with Agentic Coding
-                </Title>
+
                 <Text size="sm" c="gray.7" style={{ lineHeight: 1.8 }}>
 
                   With the rise of agentic coding platforms, technological barriers
