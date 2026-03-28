@@ -1,29 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button, Card, Text, Title, Badge, Group, Stack } from "@mantine/core";
-import Image from "next/image";
-import Link from "next/link";
+import { Text, Title, Stack } from "@mantine/core";
+import { SiteHeader } from "@/components/site-header";
 
-// Image paths for root deployment
 const getImagePath = (imageName: string) => {
   let basePath = "";
-
   if (process.env.NODE_ENV === "production") {
-    // If BASE_PATH is explicitly set (even to empty string), use it
-    if (process.env.BASE_PATH !== undefined) {
-      basePath = process.env.BASE_PATH;
-    } else {
-      // Default to root path
-      basePath = "";
-    }
+    basePath = process.env.BASE_PATH !== undefined ? process.env.BASE_PATH : "";
   }
-
   return `${basePath}/images/${imageName}`;
 };
 
 const images = {
-  polyuLogo: getImagePath("polyu-logo.png"),
   event1: getImagePath("event1.png"),
   event2: getImagePath("event2.png"),
   student1: getImagePath("student1.png"),
@@ -33,93 +22,101 @@ const images = {
   achievement3: getImagePath("achievement3.png"),
 };
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
+const studentReflections = [
+  {
+    title: "Physiotherapy Student",
+    quote:
+      "As a future physiotherapist, working in an elderly home is one of my career choices. During the visit, I learned how to integrate AI and robotics into my field. The interactive AI setup and robots collected and used data as a reference for developing treatment plans. Moreover, it is ethically important to respect patient privacy, avoiding any exploitation of their personal information.",
+    color: "blue",
+  },
+  {
+    title: "Radiography Student",
+    quote:
+      "The demonstration of medical robots opened my eyes to how technology can transform patient care and the work environment for healthcare professionals. These experiences have motivated me to continue developing my skills and knowledge in radiography.",
+    color: "green",
+  },
+  {
+    title: "Applied Biology and Chemical Technology Student",
+    quote:
+      "As a student in Applied Biology and Chemical Technology, I see strong potential for integrating AI and robotics into my field. The immersive VR setups and robotic demonstrations during the IC visit broadened my understanding of how these technologies can enhance lab safety, data analysis, and experimental accuracy.",
+    color: "purple",
+  },
+  {
+    title: "Building and Real Estate Student",
+    quote:
+      "As a student in the Building and Real Estate program, my visit to the smart elderly home provided valuable insights into the future of living spaces for seniors. It will inform my approach to designing environments that meet the needs of an aging population.",
+    color: "orange",
+  },
+  {
+    title: "Occupational Therapy Student",
+    quote:
+      "When working with elderly individuals or people with disabilities, robots can communicate with them and assist in their daily lives. They can also serve as companions, providing support and happiness, which is essential for my future practice in occupational therapy.",
+    color: "red",
+  },
+  {
+    title: "Social Sciences Student",
+    quote:
+      "As a social science student, I believe the development of humanoid robots may change the way we interact with technology. My career aspiration is to work in the hospitality industry, and the insights from this visit have greatly inspired my future studies and career goals.",
+    color: "teal",
+  },
+];
+
+const accentColors: Record<string, string> = {
+  blue: "border-blue-300 bg-blue-50",
+  green: "border-green-300 bg-green-50",
+  purple: "border-purple-300 bg-purple-50",
+  orange: "border-orange-300 bg-orange-50",
+  red: "border-red-300 bg-red-50",
+  teal: "border-teal-300 bg-teal-50",
+};
+const labelColors: Record<string, string> = {
+  blue: "text-blue-700",
+  green: "text-green-700",
+  purple: "text-purple-700",
+  orange: "text-orange-700",
+  red: "text-red-700",
+  teal: "text-teal-700",
 };
 
 export default function ImpactPage() {
   return (
     <div
-      className="min-h-screen from-cyan-50 to-blue-100"
+      className="min-h-screen"
       style={{
         background:
-          "linear-gradient(360deg, rgb(255, 255, 255) 0%, rgb(238, 255, 248) 21.15%, rgb(217, 238, 255) 100%)",
+          "linear-gradient(180deg, rgb(217, 238, 255) 0%, rgb(238, 255, 248) 40%, rgb(255, 255, 255) 100%)",
       }}
     >
-      {/* Header */}
-      <header className="bg-white/90 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <Image
-              src={images.polyuLogo}
-              alt="The Hong Kong Polytechnic University"
-              width={200}
-              height={40}
-              className="h-10 w-auto"
-            />
-          </div>
+      <SiteHeader />
 
-          <nav className="flex items-center space-x-8">
-            <Link
-              href="/"
-              className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
-            >
-              Innovation Highlights
-            </Link>
-            <Link
-              href="/impact"
-              className="text-blue-600 font-medium border-b-2 border-blue-600 pb-1"
-            >
-              Impacts
-            </Link>
-          </nav>
-        </div>
-      </header>
-
-      {/* Main Content */}
       <main
         className="container mx-auto px-6 py-12"
-        style={{ maxWidth: "1200px" }}
+        style={{ maxWidth: "1100px" }}
       >
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-4"
+          className="mb-10"
         >
-          <Title
-            order={1}
-            size="h1"
-            className="text-3xl font-bold text-blue-900 "
-          >
+          <Title order={1} className="text-3xl font-bold text-blue-900 mb-4">
             Project Impact
           </Title>
-        </motion.div>
-
-        {/* Project Overview */}
-        <motion.div
-          variants={fadeInUp}
-          initial="initial"
-          animate="animate"
-          className="mb-12 "
-        >
-          <Text size="md" c="gray.7" style={{ lineHeight: 1.6 }}>
-            Our innovative GPTutor platform was shortlisted for{" "}
+          <Text size="md" c="gray.7" style={{ lineHeight: 1.75, maxWidth: 820 }}>
+            Our innovative GPTutor platform was shortlisted for the{" "}
             <strong>2024 QS Reimagine Education Awards</strong> in the AI in
             Education category. Since then, we have made significant progress in
-            enhancing the platform features, developing new simulation
-            scenarios, promoting the platform both within and beyond PolyU, and
-            adopting the platform for learning by students from diverse
-            disciplines. In the past year, over 3,000 students from more than 20
-            departments and schools have used GPTutor to support their learning
-            across 15+ courses.
+            enhancing platform features, developing new simulation scenarios,
+            promoting the platform both within and beyond PolyU, and adopting it
+            for learning by students from diverse disciplines. In the past year,
+            over <strong>3,000 students</strong> from more than{" "}
+            <strong>20 departments and schools</strong> have used GPTutor to
+            support their learning across 15+ courses.
           </Text>
         </motion.div>
 
-        {/* Our Achievements */}
+        {/* Achievements */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -127,21 +124,16 @@ export default function ImpactPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title
-            order={2}
-            size="h2"
-            className="text-xl font-bold text-blue-900 pb-4"
-          >
-            Our Achievements:
+          <Title order={2} size="h2" className="text-xl font-bold text-blue-900 mb-6">
+            Our Achievements
           </Title>
-
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="flex flex-col md:flex-row gap-7">
             {[
               {
                 title: "Shortlisted for 2024 QS Reimagine Education Awards",
                 description:
-                  "Our GPTutor platform was shortlisted for 2024 QS Reimagine Education Awards in the AI in Education category.",
-                image: "/images/achievement1.png",
+                  "Our GPTutor platform was shortlisted for the 2024 QS Reimagine Education Awards in the AI in Education category.",
+                image: images.achievement1,
               },
               {
                 title: "User-Friendly and Effective",
@@ -155,39 +147,27 @@ export default function ImpactPage() {
                   "Our project was featured at various international conferences, including the Times Higher Education (THE) Global AI Forum 2024.",
                 image: images.achievement3,
               },
-            ].map((achievement, index) => (
-              <Card
-                key={index}
-                shadow="sm"
-                padding={0}
-                radius={6}
-                withBorder
-                className="bg-white overflow-hidden"
+            ].map((a) => (
+              <div
+                key={a.title}
+                className="flex-1 min-w-0 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
               >
-                <Card.Section className="relative h-48">
-                  <Image
-                    src={achievement.image || "/placeholder.svg"}
-                    alt={achievement.title}
-                    fill
-                    className="object-cover"
-                  />
-                </Card.Section>
-                <div className="p-4">
-                  <Title
-                    order={3}
-                    size="h5"
-                    fw={600}
-                    c="blue.9"
-                    mb="xs"
-                    style={{ fontSize: "0.875rem" }}
-                  >
-                    {achievement.title}
-                  </Title>
-                  <Text size="xs" c="gray.6" style={{ lineHeight: 1.5 }}>
-                    {achievement.description}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={a.image}
+                  alt={a.title}
+                  className="w-full object-cover"
+                  style={{ height: 180 }}
+                />
+                <div className="p-5">
+                  <Text fw={600} c="blue.9" size="sm" mb={6}>
+                    {a.title}
+                  </Text>
+                  <Text size="xs" c="gray.6" style={{ lineHeight: 1.6 }}>
+                    {a.description}
                   </Text>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </motion.div>
@@ -200,114 +180,92 @@ export default function ImpactPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title
-            order={2}
-            size="h2"
-            className="text-xl font-bold text-blue-900 pb-4"
-          >
+          <Title order={2} size="h2" className="text-xl font-bold text-blue-900 mb-6">
             Activity Highlights
           </Title>
 
-          <Card
-            shadow="sm"
-            padding="lg"
-            radius={6}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 mb-8"
-          >
-            <div className="grid md:grid-cols-2 gap-6 items-center">
-              <div className="flex items-center justify-center h-full">
-                <Stack gap="md" className="max-w-md">
-                  <Title order={3} size="h4" c="white">
-                    Generative AI-Powered Virtual Patient Simulations for
-                    Optometry Students
-                  </Title>
-
-                  <Text c="blue.1" size="sm" style={{ lineHeight: 1.6 }}>
-                    The project was showcased in the &quot;Transformation of
-                    Higher Education in the AI Era: Innovation, Best Practices,
-                    and Impact&quot; (AIHED) Symposium on 21 May. In the session
-                    &quot;Learning and teaching show and tell: Showcasing
-                    exemplary use of GenAI in learning, teaching, and assessment
-                    practices by students and teachers from the eight UGC-funded
-                    universities in Hong Kong&quot;, we shared how we use the
-                    platform to create virtual patient simulation for the
-                    students in School of Optometry and a student from the
-                    School of Optometry also shared his learning experience with
-                    the platform in the course SO4009 General and Ocular
-                    Pharmacology.
-                  </Text>
-                </Stack>
-              </div>
-              <Card shadow="sm" padding="md" radius={6} className="bg-black">
-                <div className="relative  h-80 bg-gray-900 rounded overflow-hidden">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/ecRPWmNyC9o"
-                    title="Virtual Patient Simulation"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="rounded"
-                  ></iframe>
+          <div className="rounded-2xl overflow-hidden bg-gradient-to-r from-blue-700 to-purple-700 mb-8">
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="p-8 flex flex-col justify-center">
+                <Title order={3} size="h4" c="white" mb="sm">
+                  Generative AI-Powered Virtual Patient Simulations for
+                  Optometry Students
+                </Title>
+                <Text c="blue.1" size="sm" style={{ lineHeight: 1.75 }}>
+                  The project was showcased at the{" "}
+                  <strong style={{ color: "white" }}>
+                    &quot;Transformation of Higher Education in the AI Era&quot;
+                    (AIHED) Symposium
+                  </strong>{" "}
+                  on 21 May. We shared how the platform creates virtual patient
+                  simulations for students in the School of Optometry. A student
+                  from the School of Optometry also shared his learning
+                  experience in the course SO4009 General and Ocular
+                  Pharmacology.
+                </Text>
+                <div className="mt-5">
+                  <a
+                    href="https://events.polyu.edu.hk/aihed/highlights"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-white text-blue-700 text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-50 transition-colors"
+                  >
+                    See Event Highlights
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </a>
                 </div>
-              </Card>
+              </div>
+              <div className="p-6 flex items-center">
+                <div className="w-full rounded-xl overflow-hidden shadow-lg">
+                  <div className="relative bg-black" style={{ paddingBottom: "56.25%" }}>
+                    <iframe
+                      className="absolute inset-0 w-full h-full"
+                      src="https://www.youtube.com/embed/ecRPWmNyC9o"
+                      title="Virtual Patient Simulation"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
-          </Card>
-
-          <div className="text-center">
-            <Button
-              color="blue"
-              radius={6}
-              size="sm"
-              className="bg-blue-600 hover:bg-blue-700"
-              onClick={() => {
-                window.open(
-                  "https://events.polyu.edu.hk/aihed/highlights",
-                  "_blank"
-                );
-              }}
-            >
-              Click to See the Event Highlights
-            </Button>
-          </div>
-        </motion.div>
-
-        {/* Event Details */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-            <Text size="sm" c="gray.7" style={{ lineHeight: 1.6 }} >
-              During the forum, students in the School of Optometry shared their
-              experiences, highlighting how the virtual patient simulation in
-              GPTutor brings clinical scenarios to life, boosts confidence, and
-              offers a safe environment for practicing complex cases.
-            </Text>
-
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <Image
-              src={images.event1}
-              alt="Student presenting at conference"
-              width={400}
-              height={250}
-              className="rounded-lg shadow-sm w-full"
-              style={{ borderRadius: "6px" }}
-            />
-            <Image
-              src={images.event2}
-              alt="Conference group photo"
-              width={400}
-              height={250}
-              className="rounded-lg shadow-sm w-full"
-              style={{ borderRadius: "6px" }}
-            />
           </div>
 
-
+          <Text size="sm" c="gray.7" style={{ lineHeight: 1.75 }} className="mb-5">
+            During the forum, students in the School of Optometry shared their
+            experiences, highlighting how the virtual patient simulation in
+            GPTutor brings clinical scenarios to life, boosts confidence, and
+            offers a safe environment for practising complex cases.
+          </Text>
+          <div className="grid md:grid-cols-2 gap-5">
+            {[
+              { src: images.event1, alt: "Student presenting at conference" },
+              { src: images.event2, alt: "Conference group photo" },
+            ].map((img) => (
+              <div key={img.alt} className="rounded-xl overflow-hidden shadow-sm">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full object-cover"
+                  style={{ height: 250 }}
+                />
+              </div>
+            ))}
+          </div>
         </motion.div>
 
         {/* Student Testimonials */}
@@ -318,92 +276,48 @@ export default function ImpactPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Group justify="center" mb="lg">
-            <Title
-              order={2}
-              size="h2"
-              className="text-xl font-bold text-blue-900"
-            >
-              Student Voices
-            </Title>
-          </Group>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card
-              shadow="sm"
-              padding="lg"
-              radius={6}
-              withBorder
-              className="bg-white"
-            >
-              <Stack align="center" mb="md">
-                <Image
-                  src={images.student1}
-                  alt="Male optometry student"
-                  width={64}
-                  height={64}
-                  className="w-28 h-28 rounded-full object-cover"
-                  style={{ borderRadius: "50%" }}
-                />
-                <Text fw={600} c="gray.9">
-                  Optometry Student
-                </Text>
-              </Stack>
-              <Text
-                size="sm"
-                c="gray.7"
-                fs="italic"
-                style={{ lineHeight: 1.6 }}
+          <Title order={2} size="h2" className="text-xl font-bold text-blue-900 mb-6">
+            Student Voices
+          </Title>
+          <div className="grid md:grid-cols-2 gap-7">
+            {[
+              {
+                img: images.student1,
+                name: "Optometry Student",
+                quote:
+                  "Using GPTutor feels like having a patient right in front of me which really brings the clinical experience to life. It's helped me connect what I've learned in pharmacology and pathology to real cases, making the learning process more meaningful. As I am still in clinical placements, I find it very reassuring to practice with rare and tricky eye conditions that I might not see throughout my clinical rotations. GPTutor has definitely boosted my confidence and made me feel more prepared to care for real patients.",
+              },
+              {
+                img: images.student2,
+                name: "Optometry Student",
+                quote:
+                  "Chatting with virtual patients is less stressful than being in the clinic because if I make a mistake, I can try again. I can also talk to the AI assistant to learn more about the conditions, so I feel better prepared when I encounter the same conditions in real patients.",
+              },
+            ].map((s) => (
+              <div
+                key={s.name + s.quote.slice(0, 20)}
+                className="bg-white border border-gray-100 rounded-2xl p-7 shadow-sm"
               >
-                &quot;Using GPTutor feels like having a patient right in front
-                of me which really brings the clinical experience to life.
-                It&apos;s helped me connect what I&apos;ve learned in
-                pharmacology and pathology to real cases, making the learning
-                process more meaningful. As I am still in clinical placements, I
-                find it very reassuring to practice with rare and tricky eye
-                conditions that I might not see throughout my clinical
-                rotations. GPTutor has definitely boosted my confidence and made
-                me feel more prepared to care for real patients.&quot;
-              </Text>
-            </Card>
-
-            <Card
-              shadow="sm"
-              padding="lg"
-              radius={6}
-              withBorder
-              className="bg-white"
-            >
-              <Stack align="center" mb="md">
-                <Image
-                  src={images.student2}
-                  alt="Female optometry student"
-                  width={64}
-                  height={64}
-                  className="w-28 h-28 rounded-full object-cover"
-                  style={{ borderRadius: "50%" }}
-                />
-                <Text fw={600} c="gray.9">
-                  Optometry Student
+                <div className="flex items-center gap-4 mb-5">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={s.img}
+                    alt={s.name}
+                    className="w-14 h-14 rounded-full object-cover border-2 border-blue-100"
+                  />
+                  <Text fw={600} c="gray.9" size="sm">
+                    {s.name}
+                  </Text>
+                </div>
+                <Text size="sm" c="gray.6" fs="italic" style={{ lineHeight: 1.75 }}>
+                  &quot;{s.quote}&quot;
                 </Text>
-              </Stack>
-              <Text
-                size="sm"
-                c="gray.7"
-                fs="italic"
-                style={{ lineHeight: 1.6 }}
-              >
-                &quot;Chatting with virtual patients is less stressful than
-                being in the clinic because if I make a mistake, I can try
-                again. I can also talk to the AI assistant to learn more about
-                the conditions, so I feel better prepared when I encounter the
-                same conditions in real patients.&quot;
-              </Text>
-            </Card>
+              </div>
+            ))}
           </div>
         </motion.div>
 
-        {/* Impacts of Experimental Learning */}
+        {/* Impacts of Experiential Learning */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -411,101 +325,48 @@ export default function ImpactPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title
-            order={2}
-            size="h2"
-            className="text-xl font-bold text-blue-900 pb-4"
-          >
-            Impacts of Experimental Learning
+          <Title order={2} size="h2" className="text-xl font-bold text-blue-900 mb-5">
+            Impacts of Experiential Learning
           </Title>
-
-          <Stack className=" mb-4">
-            <Text size="sm" c="gray.7" style={{ lineHeight: 1.6 }}>
+          <Stack gap="md" className="mb-7">
+            <Text size="sm" c="gray.7" style={{ lineHeight: 1.75 }}>
               We have complemented online learning with experiential learning
               activities at the PolyU Industrial Centre for AI literacy
-              education. These activities have reached over 1,600 students from
-              more than 20 different programmes, including Occupational Therapy,
-              Radiography, Physiotherapy, Computing & AI, Land Surveying &
-              Geo-Informatics, Applied Social Sciences, Fashion & Textiles,
-              Chinese History & Culture, Biotechnology & Chemical Technology,
-              Food Safety & Technology, Hotel & Tourism Management, Building &
-              Real Estate, among others.
+              education. These activities have reached over{" "}
+              <strong>1,600 students</strong> from more than{" "}
+              <strong>20 different programmes</strong>, including Occupational
+              Therapy, Radiography, Physiotherapy, Computing &amp; AI, Land
+              Surveying &amp; Geo-Informatics, Applied Social Sciences, Fashion
+              &amp; Textiles, Chinese History &amp; Culture, Biotechnology &amp;
+              Chemical Technology, Food Safety &amp; Technology, Hotel &amp;
+              Tourism Management, Building &amp; Real Estate, among others.
             </Text>
-            <Text size="sm" c="gray.7" style={{ lineHeight: 1.6 }}>
-              For the experiential learning activities, our recent survey
-              results show that 89% of the students agree/strongly agree that
-              the experiential learning activity at PolyU IC is useful to help
-              them better connect AI with their disciplines and future careers.
-              From the students&apos; reflection reports, the experiential
-              learning activities enable the students to connect to their future
-              careers.
+            <Text size="sm" c="gray.7" style={{ lineHeight: 1.75 }}>
+              Our recent survey results show that{" "}
+              <strong>89% of students agree or strongly agree</strong> that the
+              experiential learning activity at PolyU IC is useful to help them
+              better connect AI with their disciplines and future careers. From
+              students&apos; reflection reports, the experiential learning
+              activities enable students to connect to their future careers.
             </Text>
           </Stack>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Physiotherapy Student",
-                quote:
-                  "As a future physiotherapist, working in an elderly home is one of my career choices. During the visit, I learned how to integrate AI and robotics into my field. The interactive AI setup and robots collected and used data as a reference for developing treatment plans. Moreover, it is ethically and to respect patient privacy, avoiding any exploitation of their personal information.",
-                color: "blue",
-              },
-              {
-                title: "Radiography Student",
-                quote:
-                  "The demonstration of medical robots opened my eyes to how technology can transform patient care and the work environment for healthcare professionals. These experiences have motivated me to continue developing my skills and knowledge in radiography.",
-                color: "green",
-              },
-              {
-                title: "Applied Biology and Chemical Technology Student",
-                quote:
-                  "As a student in Applied Biology and Chemical Technology, I see strong potential for integrating AI and robotics into my field. The immersive VR setups and robotic demonstrations during the IC visit broadened my understanding of how these technologies can enhance lab safety, data analysis, and experimental accuracy.",
-                color: "purple",
-              },
-              {
-                title: "Building and Real Estate Student",
-                quote:
-                  "As a student in the Building and Real Estate program, my visit to the smart elderly home provided valuable insights into the future of living spaces for seniors. It will inform my approach to designing environments that meet the needs of an aging population.",
-                color: "orange",
-              },
-              {
-                title: "Occupational Therapy Student",
-                quote:
-                  "When working with elderly individuals or people with disabilities, robots can communicate with them and assist in their daily lives. They can also serve as companions, providing support and happiness, which is essential for my future practice in occupational therapy.",
-                color: "red",
-              },
-              {
-                title: "Social Sciences Student",
-                quote:
-                  "As a social science student, I believe the development of humanoid robots may change the way we interact with technology. My career aspiration is to work in the hospitality industry, and the insights from this visit have greatly inspired my future studies and career goals.",
-                color: "teal",
-              },
-            ].map((testimonial, index) => (
-              <Card
-                key={index}
-                shadow="sm"
-                padding="md"
-                radius={6}
-                withBorder
-                className="bg-white"
+
+          <Title order={3} size="h4" className="text-base font-semibold text-blue-800 mb-5">
+            Student Reflections
+          </Title>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {studentReflections.map((r) => (
+              <div
+                key={r.title}
+                className={`rounded-xl border-l-4 p-5 ${accentColors[r.color]}`}
               >
-                <Badge
-                  color={testimonial.color}
-                  radius={6}
-                  size="sm"
-                  mb="sm"
-                  className={`bg-${testimonial.color}-100 text-${testimonial.color}-800`}
-                >
-                  {testimonial.title}
-                </Badge>
-                <Text
-                  size="xs"
-                  c="gray.7"
-                  fs="italic"
-                  style={{ lineHeight: 1.5 }}
-                >
-                  &quot;{testimonial.quote}&quot;
+                <p className={`text-xs font-semibold mb-2 ${labelColors[r.color]}`}>
+                  {r.title}
+                </p>
+                <Text size="xs" c="gray.7" fs="italic" style={{ lineHeight: 1.6 }}>
+                  &quot;{r.quote}&quot;
                 </Text>
-              </Card>
+              </div>
             ))}
           </div>
         </motion.div>
@@ -518,56 +379,39 @@ export default function ImpactPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title
-            order={2}
-            size="h2"
-            className="text-xl font-bold text-blue-900 pb-4"
-          >
+          <Title order={2} size="h2" className="text-xl font-bold text-blue-900 mb-5">
             Publications
           </Title>
-
-          <Stack gap="md">
-            <Card
-              shadow="sm"
-              padding="lg"
-              radius={6}
-              withBorder
-              className="bg-white"
-            >
-              <Text fw={400} c="gray.9" size="sm">
+          <div className="space-y-4">
+            <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm">
+              <Text fw={400} c="gray.8" size="sm" style={{ lineHeight: 1.7 }}>
                 Richard Wing Cheung Lui, Haoran Bai, Aiden Wen Yi Zhang, and
                 Elvin Tsun Him Chu, &quot;GPTutor: A Generative AI-powered
                 Intelligent Tutoring System to Support Interactive Learning with
                 Knowledge-Grounded Question Answering,&quot; in 2024
                 International Conference on Advances in Electrical Engineering
-                and Computer Applications (AEECA), pp. 702-707, IEEE, 2024. [
+                and Computer Applications (AEECA), pp. 702–707, IEEE, 2024.{" "}
+                [
                 <a
                   href="https://ieeexplore.ieee.org/document/10898626"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-800 underline"
+                  className="text-blue-600 hover:underline"
                 >
                   View Paper
                 </a>
                 ]
               </Text>
-            </Card>
-
-            <Card
-              shadow="sm"
-              padding="lg"
-              radius={6}
-              withBorder
-              className="bg-white"
-            >
-              <Text fw={400} c="gray.9" size="sm">
+            </div>
+            <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm">
+              <Text fw={400} c="gray.8" size="sm" style={{ lineHeight: 1.7 }}>
                 Haoran Bai, Richard Wing Cheung, and Paul Vinod Khiatani,
                 &quot;Promoting Student Engagement with GPTutor: An Intelligent
                 Tutoring System Powered by Generative AI,&quot; manuscript
                 submitted for publication.
               </Text>
-            </Card>
-          </Stack>
+            </div>
+          </div>
         </motion.div>
       </main>
     </div>
