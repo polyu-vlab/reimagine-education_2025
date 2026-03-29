@@ -50,14 +50,14 @@ export default function GPTutorPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-20"
         >
           <p className="text-xs font-semibold tracking-widest uppercase text-emerald-600 mb-2">
             GenAI-Powered · Scenario-Based Learning
           </p>
           <Title
             order={1}
-            className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-8"
+            className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-6"
           >
             GPTutor: A GenAI-Powered Learning Platform
           </Title>
@@ -140,7 +140,6 @@ export default function GPTutorPage() {
                 src={images.gpthomepage}
                 alt="GPTutor Platform Screenshot"
                 className="w-full rounded-xl shadow-lg object-contain"
-                style={{ background: "#f0f4ff" }}
               />
             </Grid.Col>
           </Grid>
@@ -178,7 +177,7 @@ export default function GPTutorPage() {
                 src={images.selfDirectedLearning}
                 alt="Knowledge-Grounded Q&A Interface"
                 className="w-full rounded-xl shadow-md object-contain"
-                style={{ maxHeight: 380, background: "#f8fafc" }}
+                style={{ maxHeight: 380 }}
               />
             </Grid.Col>
           </Grid>
@@ -214,7 +213,7 @@ export default function GPTutorPage() {
                 src={images.gptutorQuiz1}
                 alt="Self-Quiz Generation Interface"
                 className="w-full rounded-xl shadow-md object-contain"
-                style={{ maxHeight: 420, background: "#f8fafc" }}
+                style={{ maxHeight: 420 }}
               />
             </Grid.Col>
           </Grid>
@@ -268,7 +267,7 @@ export default function GPTutorPage() {
                 src={images.simulation}
                 alt="Virtual Patient Simulation"
                 className="w-full rounded-xl shadow-md object-contain"
-                style={{ maxHeight: 380, background: "#f8fafc" }}
+                style={{ maxHeight: 380 }}
               />
             </Grid.Col>
           </Grid>

@@ -38,16 +38,16 @@ export default function ProjectBasedLearningPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-20"
         >
           <p className="text-xs font-semibold tracking-widest uppercase text-purple-500 mb-2">
             Authentic Learning · Redesigned Assessment
           </p>
           <Title
             order={1}
-            className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-8"
+            className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-6"
           >
-            Project-Based Learning with Assessment Redesigned
+            Project-Based Learning 
           </Title>
           <Text size="md" c="gray.6" style={{ maxWidth: 1100, lineHeight: 1.75 }}>
             As AI can now complete a wide variety of assignments with a high

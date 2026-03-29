@@ -98,9 +98,9 @@ export default function ImpactPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-10"
+          className="mb-20"
         >
-          <Title order={1} className="text-3xl font-bold text-blue-900 mb-4">
+          <Title order={1} className="text-3xl font-bold text-blue-900 mb-6">
             Project Impact
           </Title>
           <Text size="md" c="gray.7" style={{ lineHeight: 1.75, maxWidth: 820 }}>

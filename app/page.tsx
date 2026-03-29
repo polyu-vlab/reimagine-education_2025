@@ -63,18 +63,33 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65 }}
-          className="mb-14"
+          className="mb-20"
         >
           <Title
             order={1}
-            className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-14"
+            className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-10"
           >
             Nurturing Workplace-Ready Professionals in the Age of AI
           </Title>
 
           <div className="flex flex-col md:flex-row gap-8 items-start">
-            {/* Left: text */}
-            <div className="flex-1">
+            {/* Left: video */}
+            <div className="w-full md:w-2/3 flex-shrink-0">
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <div className="relative" style={{ paddingBottom: "56.25%" }}>
+                  <iframe
+                    src="https://www.youtube.com/embed/xZC59Ulg3hg"
+                    title="AI Literacy to Workplace Excellence"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Right: text */}
+            <div className="w-full md:w-1/3 flex-shrink-0">
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                 <Text
                   size="sm"
@@ -93,21 +108,6 @@ export default function HomePage() {
                   students to apply what they have learned in professional and workplace
                   contexts.
                 </Text>
-              </div>
-            </div>
-
-            {/* Right: video */}
-            <div className="w-full md:w-1/2 flex-shrink-0">
-              <div className="rounded-xl overflow-hidden shadow-lg">
-                <div className="relative" style={{ paddingBottom: "56.25%" }}>
-                  <iframe
-                    src="https://www.youtube.com/embed/xZC59Ulg3hg"
-                    title="AI Literacy to Workplace Excellence"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                  />
-                </div>
               </div>
             </div>
           </div>

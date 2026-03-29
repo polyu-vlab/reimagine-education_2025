@@ -1,3 +1,11 @@
+
+# About PolyU Industrial Center
+
+![alt text](images/polyu industrial center.png
+
+Students from a wide range of disciplines, including Occupational Therapy, Radiography, Physiotherapy, Computing & AI, Land Surveying, Applied Social Sciences, Fashion & Textiles, Chinese History & Culture, Biotechnology, Food Safety & Technology, Hotel & Tourism Management, and Building & Real Estate, etc, have participated in the experiential learning activities. Following these activities, students are required to submit a reflection report that connects their theoretical learning with real-world contexts and relates AI to their own disciplines and future professional roles. Here are some examples of student reflections:
+
+
 # Project-based learning with Agentic coding platforms
 
  We integrate software development projects that make purposeful use of AI from ideation to prototyping. Students are introduced to foundational knowledge, including version control with Git, as well as emerging skills such as prompt engineering and context engineering for agentic coding. We also invite industry practitioners to share emerging trends related to the use of AI in software development. 
