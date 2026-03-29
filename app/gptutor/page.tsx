@@ -53,9 +53,7 @@ export default function GPTutorPage() {
           transition={{ duration: 0.6 }}
           className="mb-20"
         >
-          <p className="text-xs font-semibold tracking-widest uppercase text-emerald-600 mb-2">
-            GenAI-Powered · Scenario-Based Learning
-          </p>
+          
           <Title
             order={1}
             className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-6"
@@ -92,7 +90,7 @@ export default function GPTutorPage() {
           <Grid gutter="xl" align="center">
             <Grid.Col span={{ base: 12, md: 5 }}>
               <Stack gap="md">
-                <Title order={2} size="h3" className="text-xl font-bold text-blue-800">
+                <Title order={2} size="h3" className="text-xl font-bold text-blue-800" style={{ paddingBottom: '5px' }}>
                   Platform Overview
                 </Title>
                 <Text size="sm" c="gray.7" style={{ lineHeight: 1.8 }}>
@@ -152,7 +150,7 @@ export default function GPTutorPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-5">
+          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-5" style={{ paddingBottom: '5px' }}>
             Knowledge-Grounded Question Answering
           </Title>
           <Grid gutter="xl" align="start">
@@ -190,7 +188,7 @@ export default function GPTutorPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-5">
+          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-5" style={{ paddingBottom: '5px' }}>
             Self-Quiz Generation
           </Title>
           <Grid gutter="xl" align="start">
@@ -226,7 +224,7 @@ export default function GPTutorPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-5">
+          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-5" style={{ paddingBottom: '5px' }}>
             Scenario-Based Simulation Learning
           </Title>
           <Text size="sm" c="gray.7" style={{ lineHeight: 1.8 }} className="mb-6">
@@ -272,7 +270,7 @@ export default function GPTutorPage() {
           </Grid>
 
           {/* Scenario builder screenshots */}
-          <Title order={3} size="h4" className="text-base font-semibold text-blue-800 mb-4">
+          <Title order={3} size="h4" className="text-base font-semibold text-blue-800 mb-4" style={{ paddingBottom: '5px' }}>
             Scenario Builder for Instructors
           </Title>
           <Text size="sm" c="gray.7" style={{ lineHeight: 1.8 }} className="mb-5">
@@ -311,7 +309,7 @@ export default function GPTutorPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-blue-900 mb-6">
+          <Title order={2} size="h3" className="text-xl font-bold text-blue-900 mb-6" style={{ paddingBottom: '5px' }}>
             Recognition & Reach
           </Title>
 
@@ -355,7 +353,7 @@ export default function GPTutorPage() {
           </div>
 
           {/* Activity Highlights */}
-          <Title order={2} size="h3" className="text-xl font-bold text-blue-900 mb-6">
+          <Title order={2} size="h3" className="text-xl font-bold text-blue-900 mb-6" style={{ paddingBottom: '5px' }}>
             Activity Highlights
           </Title>
 
@@ -473,7 +471,7 @@ export default function GPTutorPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-blue-900 mb-6">
+          <Title order={2} size="h3" className="text-xl font-bold text-blue-900 mb-6" style={{ paddingBottom: '5px' }}>
             Student Voices
           </Title>
           <div className="grid md:grid-cols-2 gap-7">
@@ -515,7 +513,7 @@ export default function GPTutorPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-blue-900 mb-5">
+          <Title order={2} size="h3" className="text-xl font-bold text-blue-900 mb-5" style={{ paddingBottom: '5px' }}>
             Publications
           </Title>
           <div className="space-y-4">

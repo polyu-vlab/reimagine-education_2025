@@ -40,9 +40,7 @@ export default function ProjectBasedLearningPage() {
           transition={{ duration: 0.6 }}
           className="mb-20"
         >
-          <p className="text-xs font-semibold tracking-widest uppercase text-purple-500 mb-2">
-            Authentic Learning · Redesigned Assessment
-          </p>
+
           <Title
             order={1}
             className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-6"
@@ -67,7 +65,7 @@ export default function ProjectBasedLearningPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-purple-800 mb-6">
+          <Title order={2} size="h3" className="text-xl font-bold text-purple-800 mb-6" style={{ paddingBottom: '5px' }}>
             GenAI-Integrated Software Development Projects
           </Title>
           <Grid gutter="xl" align="start">
@@ -122,7 +120,7 @@ export default function ProjectBasedLearningPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-purple-800 mb-6">
+          <Title order={2} size="h3" className="text-xl font-bold text-purple-800 mb-6" style={{ paddingBottom: '5px' }}>
             Industry Capstone Projects
           </Title>
 
@@ -186,7 +184,7 @@ export default function ProjectBasedLearningPage() {
           className="mb-16"
         >
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
-            <Title order={2} size="h3" className="text-xl font-bold text-purple-800 mb-4">
+            <Title order={2} size="h3" className="text-xl font-bold text-purple-800 mb-4" style={{ paddingBottom: '5px' }}>
               Outreach: Hackathons for High School Students
             </Title>
             <Text size="sm" c="gray.7" style={{ lineHeight: 1.8 }} mb="md">

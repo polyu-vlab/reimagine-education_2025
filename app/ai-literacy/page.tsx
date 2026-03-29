@@ -104,9 +104,7 @@ export default function AILiteracyPage() {
           transition={{ duration: 0.6 }}
           className="mb-20"
         >
-          <p className="text-xs font-semibold tracking-widest uppercase text-blue-500 mb-2">
-            COMP1004 · University-Wide AI Education
-          </p>
+          
           <Title
             order={1}
             className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-6"
@@ -198,7 +196,7 @@ export default function AILiteracyPage() {
               />
             </div>
             <div className="flex-1">
-              <Title order={2} size="h3" className="text-xl font-bold text-blue-800 mb-3">
+              <Title order={2} size="h3" className="text-xl font-bold text-blue-800 mb-3" style={{ paddingBottom: '5px' }}>
                 About the PolyU Industrial Centre (IC)
               </Title>
               <Text size="sm" c="gray.7" style={{ lineHeight: 1.75 }}>
@@ -229,7 +227,7 @@ export default function AILiteracyPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-4">
+          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-4" style={{ paddingBottom: '5px' }}>
             Smart Elderly Home
           </Title>
           <Text size="sm" c="gray.7" style={{ lineHeight: 1.75 }} className="mb-6">
@@ -273,7 +271,7 @@ export default function AILiteracyPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-4">
+          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-4" style={{ paddingBottom: '5px' }}>
             Robotics Interaction
           </Title>
           <Text size="sm" c="gray.7" style={{ lineHeight: 1.75 }} className="mb-6">
@@ -316,8 +314,8 @@ export default function AILiteracyPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-4">
-            Smart Warehouse &amp; Autonomous Vehicles
+          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-4" style={{ paddingBottom: '5px' }}>
+            Smart Warehouse & Autonomous Vehicles
           </Title>
           <Text size="sm" c="gray.7" style={{ lineHeight: 1.75 }} className="mb-6">
             During the Smart Warehouse session, students manage a smart delivery
@@ -375,8 +373,8 @@ export default function AILiteracyPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-blue-900 mb-4">
-            Reach &amp; Impact
+          <Title order={2} size="h3" className="text-xl font-bold text-blue-900 mb-4" style={{ paddingBottom: '5px' }}>
+            Reach & Impact
           </Title>
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-7 mb-8">
             <Text size="sm" c="gray.7" style={{ lineHeight: 1.8 }} mb="md">
@@ -401,7 +399,7 @@ export default function AILiteracyPage() {
 
 
 
-          <Title order={3} size="h4" className="text-lg font-semibold text-blue-800 mb-5">
+          <Title order={3} size="h4" className="text-lg font-semibold text-blue-800 mb-5" style={{ paddingBottom: '5px' }}>
             Student Reflections
           </Title>
           {/* Student reflections */}

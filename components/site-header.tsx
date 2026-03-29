@@ -15,7 +15,7 @@ interface SiteHeaderProps {
 
 export function SiteHeader({ activePage = "home" }: SiteHeaderProps) {
   const navLinks = [
-    { href: "/ai-literacy", label: "AI Literacy & IC Visit", key: "ai-literacy" },
+    { href: "/ai-literacy", label: "AI Literacy Education", key: "ai-literacy" },
     { href: "/project-based-learning", label: "Project-Based Learning", key: "project-based-learning" },
     { href: "/gptutor", label: "GPTutor Platform", key: "gptutor" },
   ];

@@ -150,6 +150,7 @@ export default function HomePage() {
                     <Title
                       order={2}
                       className="text-xl font-bold text-blue-900 mb-1 group-hover:text-blue-600 transition-colors"
+                      style={{ paddingBottom: '5px' }}
                     >
                       {section.label}
                     </Title>
