@@ -110,6 +110,7 @@ export default function AILiteracyPage() {
           <Title
             order={1}
             className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-6"
+            style={{ paddingBottom: '30px' }}
           >
             AI Literacy Education with Experiential Learning
           </Title>

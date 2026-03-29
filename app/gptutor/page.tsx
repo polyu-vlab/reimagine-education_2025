@@ -28,6 +28,7 @@ const images = {
   event2: getImagePath("event2.png"),
   student1: getImagePath("student1.png"),
   student2: getImagePath("student2.png"),
+  qsAward2025: "https://www.polyu.edu.hk/comp/-/media/department/comp/media-release/2025/richard-lui_qs_2.jpg?bc=ffffff&h=525&w=1000&rev=3b0f1b6cb7684fa5a99f17654c59163d&hash=B4ED934A3EE8E95FD4DDD161A12AC5E1",
 };
 
 export default function GPTutorPage() {
@@ -58,6 +59,7 @@ export default function GPTutorPage() {
           <Title
             order={1}
             className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-6"
+            style={{ paddingBottom: '30px' }}
           >
             GPTutor: A GenAI-Powered Learning Platform
           </Title>
@@ -97,10 +99,7 @@ export default function GPTutorPage() {
                   GPTutor is used by over{" "}
                   <strong>3,000 students</strong> across{" "}
                   <strong>15+ courses</strong> and more than{" "}
-                  <strong>20 departments and schools</strong> at PolyU. It was
-                  shortlisted for the{" "}
-                  <strong>2024 QS Reimagine Education Awards</strong> in the AI
-                  in Education category.
+                  <strong>20 departments and schools</strong> at PolyU.
                 </Text>
                 <Text size="sm" c="gray.7" style={{ lineHeight: 1.8 }}>
                   The platform features three core learning modes:
@@ -316,16 +315,26 @@ export default function GPTutorPage() {
             Recognition & Reach
           </Title>
 
+          
+
+          <div className="max-w-[60%] mx-auto mb-10">
+            <div className="rounded-xl overflow-hidden shadow-sm border border-gray-100 mb-3 bg-gray-50" style={{ minHeight: 200 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img 
+                src="/images/Richard Lui_QS_2.jpg" 
+                alt="QS Reimagine Education Awards 2025 Silver Award" 
+                className="w-full h-full object-contain" 
+              />
+            </div>
+            <Text size="sm" fw={600} c="blue.9" mb={4}>QS Reimagine Education Awards 2025 Silver Award</Text>
+            <Text size="xs" c="gray.6" style={{ lineHeight: 1.6 }}>GPTutor was showcased in our project which was shortlisted in the QS Reimagine Education Awards 2025 and received the Silver Award in the 'AI in Education' category.</Text>
+          </div>
+
           <div className="flex flex-col md:flex-row gap-8 items-start mb-10">
             {[
               {
-                img: images.achievement1,
-                title: "Shortlisted: 2024 QS Reimagine Education Awards",
-                desc: "GPTutor was shortlisted for the 2024 QS Reimagine Education Awards in the AI in Education category.",
-              },
-              {
                 img: images.achievement2,
-                title: "Proven Effectiveness",
+                title: "Impact on student learning",
                 desc: "Our studies demonstrated a positive correlation between GPTutor usage and improved academic performance. 95.8% of students found the platform easy to use and 87.5% agreed it was useful for their learning.",
               },
               {
@@ -335,9 +344,9 @@ export default function GPTutorPage() {
               },
             ].map((a) => (
               <div key={a.title} className="flex-1 min-w-0">
-                <div className="rounded-xl overflow-hidden shadow-sm border border-gray-100 mb-3">
+                <div className="rounded-xl overflow-hidden shadow-sm border border-gray-100 mb-3 bg-gray-50" style={{ minHeight: 200 }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={a.img} alt={a.title} className="w-full object-cover" style={{ height: 180 }} />
+                  <img src={a.img} alt={a.title} className="w-full h-full object-contain" />
                 </div>
                 <Text size="sm" fw={600} c="blue.9" mb={4}>{a.title}</Text>
                 <Text size="xs" c="gray.6" style={{ lineHeight: 1.6 }}>{a.desc}</Text>

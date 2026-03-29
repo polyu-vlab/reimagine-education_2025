@@ -46,6 +46,7 @@ export default function ProjectBasedLearningPage() {
           <Title
             order={1}
             className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight mb-6"
+            style={{ paddingBottom: '30px' }}
           >
             Project-Based Learning 
           </Title>
@@ -66,6 +67,9 @@ export default function ProjectBasedLearningPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
+          <Title order={2} size="h3" className="text-xl font-bold text-purple-800 mb-6">
+            GenAI-Integrated Software Development Projects
+          </Title>
           <Grid gutter="xl" align="start">
             <Grid.Col span={{ base: 12, md: 4 }}>
               <Stack gap="lg">
@@ -155,43 +159,6 @@ export default function ProjectBasedLearningPage() {
 
             {/* Right: Real-World Exposure + Image */}
             <Grid.Col span={{ base: 12, md: 6 }}>
-              <Text size="sm" fw={600} c="gray.8" className="mb-4">
-                Real-World Exposure for Students:
-              </Text>
-              <div className="grid grid-cols-1 gap-4 mb-5">
-                <div className="bg-purple-50 border border-purple-100 rounded-xl p-4">
-                  <Text size="sm" fw={600} c="purple.9" mb={4}>
-                    Hong Kong Youth Aviation Academy (HKYAA)
-                  </Text>
-                  <Text size="xs" c="gray.7" style={{ lineHeight: 1.6 }}>
-                    Students received professional aviation training and had the opportunity
-                    to experience flight simulation, gaining first-hand insight into pilot
-                    workflows and cockpit operations.
-                  </Text>
-                </div>
-                <div className="bg-blue-50 border border-blue-100 rounded-xl p-4">
-                  <Text size="sm" fw={600} c="blue.9" mb={4}>
-                    Hong Kong Observatory (HKO)
-                  </Text>
-                  <Text size="xs" c="gray.7" style={{ lineHeight: 1.6 }}>
-                    Students visited HKO facilities and gained access to authoritative
-                    meteorological data, including wind shear, turbulence, and wind
-                    profile data, which formed the foundation of the weather
-                    visualisation platform they built.
-                  </Text>
-                </div>
-                <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
-                  <Text size="sm" fw={600} c="emerald.9" mb={4}>
-                    Cathay Pacific (CX)
-                  </Text>
-                  <Text size="xs" c="gray.7" style={{ lineHeight: 1.6 }}>
-                    Students visited Cathay Pacific and tried out the A350 flight
-                    simulator, deepening their understanding of real operational needs
-                    and how weather information is used by pilots in actual flight
-                    scenarios.
-                  </Text>
-                </div>
-              </div>
               <div className="rounded-xl overflow-hidden shadow-md bg-gray-50 flex flex-col justify-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -202,8 +169,10 @@ export default function ProjectBasedLearningPage() {
                 />
               </div>
               <Text size="xs" c="gray.5" ta="center" mt="xs">
-                Students collaborating with HKO, Cathay Pacific & HKYAA
+                Through industry partnerships with HKO, Cathay Pacific & HKYAA, students gained real-world aviation experience, accessing authoritative meteorological data, professional flight simulation training, and firsthand insight into pilot workflows and cockpit operations
               </Text>
+              
+
             </Grid.Col>
           </Grid>
         </motion.div>
