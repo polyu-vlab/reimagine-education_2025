@@ -53,7 +53,7 @@ const studentReflections = [
   {
     title: "Occupational Therapy Student",
     quote:
-      "When working with elderly individuals or people with disabilities, robots can communicate with them and assist in their daily lives. They can also serve as companions, providing support and happiness — which is essential for my future practice in occupational therapy.",
+      "When working with elderly individuals or people with disabilities, robots can communicate with them and assist in their daily lives. They can also serve as companions, providing support and happiness, which is essential for my future practice in occupational therapy.",
     color: "red",
   },
   {
@@ -170,7 +170,7 @@ export default function AILiteracyPage() {
                 </div>
               </div>
               <Text size="xs" c="gray.5" ta="center" mt="xs">
-                PolyU Industrial Centre — Experiential Learning Visit
+                PolyU Industrial Centre: Experiential Learning Visit
               </Text>
             </div>
           </div>
@@ -237,7 +237,7 @@ export default function AILiteracyPage() {
             video analytics designed to improve safety and enhance the quality of
             life for senior citizens. Students control automated windows and
             cupboards, operate AI-controlled lighting systems, and experiment with
-            assistive tools — gaining firsthand insight into how AI and smart systems
+            assistive tools, gaining firsthand insight into how AI and smart systems
             can support independent living and healthcare for the elderly.
           </Text>
           <Grid gutter="md">
@@ -279,7 +279,7 @@ export default function AILiteracyPage() {
             Students interact with various types of robots, exploring human-robot
             interaction and seeing how AI is applied in education, customer service,
             and entertainment. They also work with robots designed for rehabilitation
-            and healthcare — including robotic arms that assist with physical therapy —
+            and healthcare, including robotic arms that assist with physical therapy,
             gaining practical experience in how robotics can support recovery and
             improve patient care.
           </Text>

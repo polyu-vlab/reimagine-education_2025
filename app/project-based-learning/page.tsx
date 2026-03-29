@@ -147,7 +147,7 @@ export default function ProjectBasedLearningPage() {
                   critical weather information in a cognitively efficient, hands-free
                   format. A complementary machine learning model was developed to
                   predict the probability of go-around during landing, offering a
-                  proactive layer of risk assessment — showcasing the synergy of AI
+                  proactive layer of risk assessment, which showcases the synergy of AI
                   and data science in solving high-stakes aviation problems.
                 </Text>
               </div>
@@ -175,8 +175,8 @@ export default function ProjectBasedLearningPage() {
                   </Text>
                   <Text size="xs" c="gray.7" style={{ lineHeight: 1.6 }}>
                     Students visited HKO facilities and gained access to authoritative
-                    meteorological data — including wind shear, turbulence, and wind
-                    profile data — which formed the foundation of the weather
+                    meteorological data, including wind shear, turbulence, and wind
+                    profile data, which formed the foundation of the weather
                     visualisation platform they built.
                   </Text>
                 </div>

@@ -282,7 +282,7 @@ export default function GPTutorPage() {
             scenario builder currently available in the market for optometry
             education. The scenario builder lets instructors define patient
             profiles, background scenes, clinical actions, and AI response
-            parameters — all without programming.
+                  parameters, all without programming.
           </Text>
           <div className="grid grid-cols-2 gap-3">
             {[
