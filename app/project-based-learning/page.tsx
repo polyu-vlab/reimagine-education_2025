@@ -65,7 +65,7 @@ export default function ProjectBasedLearningPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-purple-800 mb-6" style={{ paddingBottom: '5px' }}>
+          <Title order={2} size="h3" className="text-xl font-bold text-purple-800 mb-6 pb-[5px]">
             GenAI-Integrated Software Development Projects
           </Title>
           <Grid gutter="xl" align="start">
@@ -120,7 +120,7 @@ export default function ProjectBasedLearningPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-purple-800 mb-6" style={{ paddingBottom: '5px' }}>
+          <Title order={2} size="h3" className="text-xl font-bold text-purple-800 mb-6 pb-[5px]">
             Industry Capstone Projects
           </Title>
 
@@ -128,7 +128,7 @@ export default function ProjectBasedLearningPage() {
             {/* Left: Intro + Outcome in one box */}
             <Grid.Col span={{ base: 12, md: 6 }}>
               <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 h-full">
-                <Title order={3} size="h4" className="text-base font-semibold text-blue-800 mb-3">
+                <Title order={3} size="h4" className="text-base font-semibold text-blue-800 mb-3 pb-[5px]">
                   Aviation Weather Visualisation & Go-Around Risk Prediction
                 </Title>
                 <Text size="sm" c="gray.7" style={{ lineHeight: 1.8 }} mb="md">
@@ -184,7 +184,7 @@ export default function ProjectBasedLearningPage() {
           className="mb-16"
         >
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
-            <Title order={2} size="h3" className="text-xl font-bold text-purple-800 mb-4" style={{ paddingBottom: '5px' }}>
+            <Title order={2} size="h3" className="text-xl font-bold text-purple-800 mb-4 pb-[5px]">
               Outreach: Hackathons for High School Students
             </Title>
             <Text size="sm" c="gray.7" style={{ lineHeight: 1.8 }} mb="md">

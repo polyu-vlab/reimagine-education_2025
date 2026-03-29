@@ -196,7 +196,7 @@ export default function AILiteracyPage() {
               />
             </div>
             <div className="flex-1">
-              <Title order={2} size="h3" className="text-xl font-bold text-blue-800 mb-3" style={{ paddingBottom: '5px' }}>
+              <Title order={2} size="h3" className="text-xl font-bold text-blue-800 mb-3 pb-[5px]">
                 About the PolyU Industrial Centre (IC)
               </Title>
               <Text size="sm" c="gray.7" style={{ lineHeight: 1.75 }}>
@@ -204,8 +204,8 @@ export default function AILiteracyPage() {
                 <span style={{ color: "#228be6", fontWeight: 600 }}>
                   PolyU Industrial Centre (IC)
                 </span>{" "}
-                serves as PolyU&apos;s central technical facility and
-                Innovation &amp; Technology Hub, distinguished by its
+                serves as PolyU's central technical facility and
+                Innovation & Technology Hub, distinguished by its
                 comprehensive range of engineering facilities, advanced equipment,
                 and expert support spanning multiple disciplines. As the only
                 establishment of its kind among the eight UGC-funded universities
@@ -227,7 +227,7 @@ export default function AILiteracyPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-4" style={{ paddingBottom: '5px' }}>
+          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-4 pb-[5px]">
             Smart Elderly Home
           </Title>
           <Text size="sm" c="gray.7" style={{ lineHeight: 1.75 }} className="mb-6">
@@ -271,7 +271,7 @@ export default function AILiteracyPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-4" style={{ paddingBottom: '5px' }}>
+          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-4 pb-[5px]">
             Robotics Interaction
           </Title>
           <Text size="sm" c="gray.7" style={{ lineHeight: 1.75 }} className="mb-6">
@@ -314,7 +314,7 @@ export default function AILiteracyPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-4" style={{ paddingBottom: '5px' }}>
+          <Title order={2} size="h3" className="text-xl font-bold text-blue-600 mb-4 pb-[5px]">
             Smart Warehouse & Autonomous Vehicles
           </Title>
           <Text size="sm" c="gray.7" style={{ lineHeight: 1.75 }} className="mb-6">
@@ -373,7 +373,7 @@ export default function AILiteracyPage() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Title order={2} size="h3" className="text-xl font-bold text-blue-900 mb-4" style={{ paddingBottom: '5px' }}>
+          <Title order={2} size="h3" className="text-xl font-bold text-blue-900 mb-4 pb-[5px]">
             Reach & Impact
           </Title>
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-7 mb-8">
@@ -381,30 +381,30 @@ export default function AILiteracyPage() {
               These experiential learning activities have reached over{" "}
               <strong>1,600 students</strong> from more than{" "}
               <strong>20 different programmes</strong>, including Occupational
-              Therapy, Radiography, Physiotherapy, Computing &amp; AI, Land
-              Surveying &amp; Geo-Informatics, Applied Social Sciences, Fashion
-              &amp; Textiles, Chinese History &amp; Culture, Biotechnology &amp;
-              Chemical Technology, Food Safety &amp; Technology, Hotel &amp;
-              Tourism Management, and Building &amp; Real Estate.
+              Therapy, Radiography, Physiotherapy, Computing & AI, Land
+              Surveying & Geo-Informatics, Applied Social Sciences, Fashion
+              & Textiles, Chinese History & Culture, Biotechnology &
+              Chemical Technology, Food Safety & Technology, Hotel &
+              Tourism Management, and Building & Real Estate.
             </Text>
             <Text size="sm" c="gray.7" style={{ lineHeight: 1.8 }}>
               Our recent survey results show that{" "}
               <strong>89% of students agree or strongly agree</strong> that the
               experiential learning activity at PolyU IC is useful to help them
               better connect AI with their disciplines and future careers. From
-              students&apos; reflection reports, the activities enable students
+              students' reflection reports, the activities enable students
               to make meaningful connections to their future professions.
             </Text>
           </div>
 
 
 
-          <Title order={3} size="h4" className="text-lg font-semibold text-blue-800 mb-5" style={{ paddingBottom: '5px' }}>
+          <Title order={3} size="h4" className="text-lg font-semibold text-blue-800 mb-5 pb-[5px]">
             Student Reflections
           </Title>
           {/* Student reflections */}
           <Text size="sm" c="gray.7" style={{ lineHeight: 1.75 }} className="mb-5">
-            Students from a wide range of disciplines, including Occupational Therapy, Radiography, Physiotherapy, Computing &amp; AI, Land Surveying, Applied Social Sciences, Fashion &amp; Textiles, Chinese History &amp; Culture, Biotechnology, Food Safety &amp; Technology, Hotel &amp; Tourism Management, and Building &amp; Real Estate, etc, have participated in the experiential learning activities. Following these activities, students are required to submit a reflection report that connects their theoretical learning with real-world contexts and relates AI to their own disciplines and future professional roles. Here are some examples of student reflections:
+            Students from a wide range of disciplines, including Occupational Therapy, Radiography, Physiotherapy, Computing & AI, Land Surveying, Applied Social Sciences, Fashion & Textiles, Chinese History & Culture, Biotechnology, Food Safety & Technology, Hotel & Tourism Management, and Building & Real Estate, etc, have participated in the experiential learning activities. Following these activities, students are required to submit a reflection report that connects their theoretical learning with real-world contexts and relates AI to their own disciplines and future professional roles. Here are some examples of student reflections:
           </Text>          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {studentReflections.map((r) => (
@@ -416,7 +416,7 @@ export default function AILiteracyPage() {
                   {r.title}
                 </p>
                 <Text size="xs" c="gray.7" fs="italic" style={{ lineHeight: 1.6 }}>
-                  &quot;{r.quote}&quot;
+                  "{r.quote}"
                 </Text>
               </div>
             ))}
