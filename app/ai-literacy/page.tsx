@@ -139,13 +139,8 @@ export default function AILiteracyPage() {
           className="mb-16"
         >
           <Grid gutter="xl" align="start">
-            <Grid.Col span={{ base: 12, md: 5 }}>
+            <Grid.Col span={{ base: 12, md: 4 }}>
               <Stack gap="md">
-  
-                <Text size="sm" c="gray.7" style={{ lineHeight: 1.75 }}>
- 
-                  
-                </Text>
                 <Text size="sm" c="gray.7" style={{ lineHeight: 1.75 }}>
                   Students visit the{" "}
                   <span style={{ color: "#228be6", fontWeight: 600 }}>
@@ -167,7 +162,7 @@ export default function AILiteracyPage() {
                 </Text>
               </Stack>
             </Grid.Col>
-            <Grid.Col span={{ base: 12, md: 6 }}>
+            <Grid.Col span={{ base: 12, md: 8 }}>
               <div className="rounded-xl overflow-hidden shadow-md">
                 <div className="relative" style={{ paddingBottom: "56.25%" }}>
                   <iframe

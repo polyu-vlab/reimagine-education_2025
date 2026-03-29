@@ -9,6 +9,7 @@ const BASE_PATH = process.env.BASE_PATH || (isProd ? "" : "");
 const nextConfig = {
   // Only use static export for production builds
   ...(isProd && { output: "export" }),
+  transpilePackages: ["framer-motion"],
   assetPrefix: isProd ? BASE_PATH : "",
   basePath: isProd ? BASE_PATH : "",
   eslint: {

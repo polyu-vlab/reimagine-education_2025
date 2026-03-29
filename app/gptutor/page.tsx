@@ -1,3 +1,4 @@
+"use client";
 
 import { motion } from "framer-motion";
 import { Text, Title, Grid, Stack } from "@mantine/core";
