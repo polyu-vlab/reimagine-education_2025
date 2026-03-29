@@ -21,8 +21,7 @@ const sections = [
     description:
       "Since 2022/23, PolyU has made AI education compulsory for all undergraduates. In COMP1004, over 1,600 students annually explore real-world AI applications at PolyU's Industrial Centre, ranging from smart elderly care and robotics to autonomous warehouses, and reflect on how AI connects to their own disciplines and future careers.",
     image: getImagePath("robot1.png"),
-    accent: "from-blue-600 to-cyan-500",
-    tag: "COMP1004 · 1,600+ Students · 20+ Programmes",
+    accent: "from-blue-600 to-cyan-500"
   },
   {
     href: "/project-based-learning",
@@ -31,8 +30,7 @@ const sections = [
     description:
       "As AI can now complete many conventional assignments with high accuracy, we shift the emphasis to authentic project-based learning in which students use GenAI to identify and solve real problems in their own fields, spanning from ideation to working software prototypes. Assessment focuses on what students uniquely contribute: problem framing, critical evaluation, creativity, and judgment.",
     image: getImagePath("capstone.png"),
-    accent: "from-purple-600 to-pink-500",
-    tag: "Authentic Projects · Peer Review · Industry Capstone",
+    accent: "from-purple-600 to-pink-500"
   },
   {
     href: "/gptutor",
@@ -42,7 +40,6 @@ const sections = [
       "GPTutor is our GenAI-powered learning platform used by over 3,000 students across 15+ courses. It supports knowledge-grounded question answering, self-quiz generation, and immersive virtual patient simulations, which enables students to practise clinical reasoning, diagnosis, and professional communication in authentic, low-stress settings.",
     image: getImagePath("simulation.png"),
     accent: "from-emerald-600 to-teal-500",
-    tag: "GPTutor · Virtual Patients · Optometry · Self-Directed Learning",
   },
 ];
 
