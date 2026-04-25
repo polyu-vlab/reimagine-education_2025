@@ -108,6 +108,19 @@ export default function ProjectBasedLearningPage() {
               <Text size="xs" c="gray.5" ta="center" mt="xs">
                 Agentic Coding Sharing Session, PolyU 2026
               </Text>
+              <div className="mt-6">
+                <a
+                  href="https://polyurichard.github.io/classex-2526/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
+                >
+                  Project Details, Survey & Student Feedback
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
             </Grid.Col>
           </Grid>
         </motion.div>
